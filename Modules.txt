@@ -1,0 +1,65 @@
+Hardware:
+
+Arduino
++Accelerometer/Gyroscope
++Pressure Sensor
++Temperature Sensor
++Each Servo
++Motors
++Each Claw
+
+NUC
++Camera Image
++Image Processing
+	-Compression for streaming
+	-Object/Color Identification
+
+Pilot
++Xbox Controller
++Keyboard
++Visual Data Display
+
+
+Modules people can build:
+Note that some of these may be as simple as "just launch this pre-existing program with x/y/z parameters". ÊThis is a great solution, as it means that the person working on that task can immediately start working on something else.
+
+Robot thrust vector (e.g. 5lb-force towards 20¡ starboard, tilt at 15¡, yaw at 5¡/sec) to motor forces
+-- Will require some additional information about the righting force of the robot, and empirical measures of rotational drag
+-- Should probably ignore orientation for now? ÊAlternately, take knowledge of robot orientation to try 3D vectored thrust ("down" using all six motors if you're tilted)...
+-- Ideally it would use velocity as an input, not force, but without measuring the robot's drag coefficient in every direction, that will be impossible.
+
+Thruster force to speed control value (Arduino)
+
+Stereo image pair to stereo map
+-- Will require calibration
+-- Figure out how to pull frames from video streams? ÊHave "get stereo" command?
+
+Stereo camera calibration system
+-- Will need to be run underwater when cameras are finalized, and every time the cameras are tweaked.
+
+Distance Measurement System
+-- Takes stereo map and orthophoto, allows measuring distance from camera to point and point to point (maybe overlay tooltip and pair of clicks?)
+-- May need to freeze a frame out of a stream from the stereo calculator
+
+XBox values to robot vectors
+-- SHould take into account throttle scaling parameter
+
+Robot status display (orientation, power usage, depth(?), etc.)
+
+Draw artificial horizon overlay on an arbitrary window with arbitrary field of view
+
+Arduino 9DOF IMU to ROS topic (in useful coordinates: roll, pitch, yaw).
+- Should include constant rotation offset to account for non-level installation.
+- If enthusiastic, also account for magnetic north being offset from true north.
+
+Video feed display
+- four frames? Picture-in-picture? Ability to swap feeds? All of the above?
+- Ability to pull in optional overlays: artificial horizon (per-camera, need to know camera mounting angles), distance map, etc.
+
+--------
+
+Things that might be appropriate to put in the ROS parameters storage:
+Motor x/y/z positions, orientations
+Camera orientations (and positions?)
+Viewport pixel sizes (so random modules can generate overlays)
+Overall throttle (to avoid going too fast / using too much power, or to allow delicate movements)
