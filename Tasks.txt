@@ -1,0 +1,31 @@
+IMU
+People: 
+Deliverable: Be able to request IMU data from a ROS environment on a PC through a ROS service and through rosserial_arduino.
+
+Pressure Sensor
+People:
+Deliverable: Be able to request pressure data from a ROS environment on a PC through a ROS service and through rosserial_arduino.
+
+Motors
+People:
+Deliverable: Be able to publish thrust vector information from a ROS environment on a PC to a topic over rosserial_arduino and the motors will activate correctly to achieve that thrust vector. 
+
+Xbox Controller
+People:
+Deliverable: Be able to publish a packet of data saying what buttons are pressed and what are not on a timer.
+
+Display
+People:
+Deliverable: Can subscribe to multiple topics and display the accompanying data intelligently to a pilot.
+
+Cameras
+People:
+Deliverable: Be able to publish a live video feed to a topic and have a screen on a separate PC be able to subscribe to it.
+
+Stereovision
+People:
+Deliverable: A ROS node subscribes to two live video feeds (or uses them as a service) and combines the images into a “stereo map”.
+
+Distance Measurement
+People:
+Deliverable: Take a stereo map and an orthophoto and return the distance to a specific object
