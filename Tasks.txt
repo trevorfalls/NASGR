@@ -1,5 +1,5 @@
 IMU
-People: 
+People: Stephen Flores
 Deliverable: Be able to request IMU data from a ROS environment on a PC through a ROS service and through rosserial_arduino.
 
 Pressure Sensor
