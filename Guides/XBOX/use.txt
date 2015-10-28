@@ -1,0 +1,29 @@
+C++ Guide for a node that subscribes to the Joy topic
+
+Sources:
+http://wiki.ros.org/joy/Tutorials/WritingTeleopNode
+http://wiki.ros.org/joy
+
+Files to include:
+#include <ros/ros.h>
+#include <sensor_msgs/Joy.h>
+
+Declare a private variable in the node's class:
+ros::Subscriber joy_sub_;
+ros:NodeHandle nh_;
+
+Declare a private function:
+void joyCallback(const sensor_msgs::Joy::ConstPtr& joy);
+
+In the constructor:
+joy_sub_ = nh_.subscribe<sensor_msgs::Joy>("joy",10,&NodeClass:joyCallback,this);
+
+Create the Callback function:
+void NodeClass::joyCallback(const sensor_msgs::Joy::ConstPtr& joy) {
+/*
+ * Here we can access the various things that come in the joy topic
+ * Two arrays: joy->buttons[], joy->axes[]
+ * The indexes can be found at http://wiki.ros.org/joy in section 5.2
+ * joy->buttons[2] will return the state of the X button (0 for unpressed, 1 for pressed)
+ */
+}

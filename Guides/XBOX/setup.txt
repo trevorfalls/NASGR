@@ -1,0 +1,30 @@
+NASGR Xbox Controller Setup for ROS Jade
+
+Sources:
+http://andrewdai.co/xbox-controller-ros.html
+http://wiki.ros.org/joy
+http://docs.ros.org/jade/api/joy/html/
+http://wiki.ros.org/joy/Tutorials
+
+We will first want to make sure that the default driver for the xbox controller (xpad) is removed.
+Run the command "sudo rmmod xpad"
+We then want to make sure that this driver will never be loaded automatically again.
+Run the command "sudo su"
+Run the command "echo "blacklist xpad" > /etc/modprobe.d/blacklist.conf"
+Install xboxdrv
+Run the command "sudo add-apt-repository ppa:grumbel/ppa"
+Run the command "sudo apt-get update"
+Run the command "sudo apt-get install xboxdrv"
+With the Xbox controller plugged into the computer
+Run the command "sudo xboxdrv"
+You should now see the screen update with every event change on the controller.
+Now install the ROS node Joy
+Run the command "sudo apt-get install ros-jade-joy"
+To test to make sure things are working, open a new terminal window
+Run the command "roscore"
+Now open another (this is the third) terminal window
+Run the command "rosrun joy joy_node"
+Now open a fourth terminal window
+Run the command "rostopic echo joy"
+In this final window you should see an output of every event change on the controller. This is being broadcast on the ROS network under the topic name "joy"
+
