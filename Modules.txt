@@ -63,3 +63,26 @@ Motor x/y/z positions, orientations
 Camera orientations (and positions?)
 Viewport pixel sizes (so random modules can generate overlays)
 Overall throttle (to avoid going too fast / using too much power, or to allow delicate movements)
+
+
+
+
+
+
+Peter System Notes:
+First, send a wakeonlan packet
+Koibuntu will automatically start roscore and all the necessary nodes
+Surface Ubuntu will run its roscore and nodes
+Surface Ubuntu initiates a diagonstic test to validate system functionality
+Pilot checks cameras and motors
+Calibrate the cameras for stereovision (if need be, should only need to be done once)
+Calibrate the accelerometer and motors
+In a single interface, the stereovision depth map is displayed
+Display the distance to a central stationary cursor in the depth map
+We can determine the length of something by calculating two distances to either end and getting the angle from the accelerometer and then using law of cosines or whatever
+Have a button on the Xbox controller that locks in one and then another distance for this length measurement
+Have the interface display the velocity of the robot in x,y,z, from data from the accelerometer
+The two joysticks and two triggers on the controller will be translated into a thrust vector on the NUC and then translated into motor movement on the Arduino
+Two buttons will be marked for opening and closing the claw
+At least one button will be marked for semi-autonomous behavior (toggling depth-holding)
+
