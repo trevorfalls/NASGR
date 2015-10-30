@@ -1,0 +1,29 @@
+Connecting two USB Cameras to the NUC running ROS Jade and viewing the feed on a Virtualbox running ROS Jade
+
+Sources:
+http://wiki.ros.org/ROS/Tutorials/MultipleMachines
+http://wiki.ros.org/usb_cam
+http://answers.ros.org/question/163556/how-to-solve-couldnt-find-an-af_inet-address-for-problem/
+http://pharos.ece.utexas.edu/wiki/index.php/How_to_Use_a_Webcam_in_ROS_with_the_usb_cam_Package
+
+Get the IP addresses for both computers. In this case, the NUC is at 129.219.195.116 and the Vbox is at 129.219.195.119.
+On the NUC run the commands:
+export ROS_IP=129.219.195.116
+export ROS_MASTER_URI=http://129.219.195.119:11311
+On the Vbox run the commands:
+export ROS_IP=129.219.195.119
+export ROS_MASTER_URI=http://129.219.195.119:11311
+
+On the Vbox, run the command:
+roscore
+
+On the NUC, run the command
+roslaunch usb_cam-test.launch
+
+On the Vbox, if you run the command
+rostopic list
+You should see a bunch of usb_cam and usb_cam1 topics
+Run the command
+roslaunch usb_cam-receiver-test.launch
+
+And the camera feeds from the NUC should appear on the Vbox screen!
