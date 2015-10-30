@@ -20,8 +20,9 @@ People:
 Deliverable: Can subscribe to multiple topics and display the accompanying data intelligently to a pilot.
 
 Cameras
-People: Andrew Mullen
+People: Andrew Mullen, Peter Tueller
 Deliverable: Be able to publish a live video feed to a topic and have a screen on a separate PC be able to subscribe to it.
+Complete: See Guides/Cameras.
 
 Stereovision
 People: Andrew Mullen
