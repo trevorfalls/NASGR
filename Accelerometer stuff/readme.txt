@@ -7,3 +7,9 @@ v3.0 uploaded 3 November 2015
 To set up the connect the MPU-6050 to an Arduino Mega, connect VCC to 3.3V, GND, SCL, SDA, and INT to Digital I/O #2.
 
 Upload the program and then open the serial window. A prompt should tell you to enter something through the serial window. The serial window will then show the yaw, pitch, and roll of the accelerometer at any time. The values will stabilize in about 10 seconds. To toggle measuring offset, enter anything to the serial window. 
+
+----------------FUTURE GOALS------------------------------------------
+
+-change toggle to toggle when a certain button from a game controller is pressed
+	-Will provide data needed to maintain the robot's orientation
+-integrate data to with robot maneuvering systems to maintain the robot's orientation
