@@ -78,7 +78,7 @@ void MainWindow::updateLoggingView() {
 *****************************************************************************/
 
 void MainWindow::on_actionAbout_triggered() {
-    QMessageBox::about(this, tr("About ..."),tr("<h2>NASGR Pilot Program Alpha 0.02</h2><p>Copyright Nobody</p><p>I mean, probably we have copyright, who knows...</p><p>This package needs an about description.</p>"));
+    QMessageBox::about(this, tr("About"),tr("<h2>NASGR Pilot Program Alpha 0.02</h2><p>Copyright Nobody</p><p>I mean, probably we have copyright, who knows...</p><p>This package needs an about description.</p>"));
 }
 
 /*****************************************************************************
