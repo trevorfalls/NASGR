@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "arduino_test_1")
+set(arduino_test_1_MAINTAINER "yizhuang <yizhuang@todo.todo>")
+set(arduino_test_1_DEPRECATED "")
+set(arduino_test_1_VERSION "0.0.0")
+set(arduino_test_1_BUILD_DEPENDS "roscpp" "rospy" "std_msgs")
+set(arduino_test_1_RUN_DEPENDS "roscpp" "rospy" "std_msgs")
+set(arduino_test_1_BUILDTOOL_DEPENDS "catkin")

@@ -1,0 +1,43 @@
+
+
+----------SELF-DISCUSSION ON HOW TO FIGURE OUT ROLL FROM AN ARBITRARY POSITION----------------------------------------10/29/2015
+
+Problem: 
+
+The team wants to have a system so that the robot will attempt to remain in the same position and orientation after the press of a toggle button. 
+
+My part: 
+
+Read and analyze the data from an MPU-6050 acceleratometer so that, after the toggle button is pressed, the Arduino will continuously record how far away the robot is from its initial orientation. The robot orientation will be output in yaw, pitch, and roll.
+
+Stuff I'm having trouble with:
+
+ I have no idea how to read the initial orientation of the robot in 3 dimensions. I have programmed the MPU-6050 to read roll correctly if the accelerometer is always pointed parallel to the Earth's surface, but I cannot point it anywhere else.
+
+Stuff I figured out:
+
+When AcZ is postive, accelerometer is right side up.
+when AcZ is negative, accelerometer is upside down.
+When AcY is positive, accelerometer is tilted right.
+When AcY is negative, accelerometer is tilted left.
+When AcX is positive, accelerometer is tilted back.
+When AcX is negative, accelerometer is tilted forward.
+
+Stuff I need to figure out:
+
+How to calculate the orientation of the accelerometer in any orientation. Earth's gravity is assumed constant. 
+
+Stuff to look up:
+
+Cross product
+
+Stuff I discovered: 
+
+Yaw is apparently very hard to measure (when nothing changes with respect to the direction of gravity) with only acceleration. I'll need to learn how to use the gyroscopic element of the accelerometer in order to get a clean read.
+
+It looks like there's already code out there that does most of what I want. Looking at http://diyhacking.com/arduino-mpu-6050-imu-sensor-tutorial/ 
+
+YAY! IT WORKED! THE site above got me the code I needed to read yaw, pitch, and roll. My next goal is to, upon a button press, record the initial orientation and then continuously calculate the offset from that initial orientation until the next button press.
+
+Stuff I accomplished today(10/29/2015):
+Created a system where, when "1" is sent through the serial window, the offset program is toggled on/off.

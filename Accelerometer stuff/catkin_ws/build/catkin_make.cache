@@ -1,0 +1,2 @@
+arduino_test_1:beginner_tutorials:test_1
+-DCATKIN_DEVEL_PREFIX=/home/yizhuang/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/yizhuang/catkin_ws/install -G Unix Makefiles
