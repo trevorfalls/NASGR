@@ -6,14 +6,12 @@ int i = 0;
 
 void chatterCallback(const std_msgs::Float32MultiArray::Ptr & msg)
 {
-  std::cout << (*msg).data[0] << " " << (*msg).data[1] << " " << (*msg).data[2] << " " << ++i << '\n';
+  std::cout << (*msg).data[0] << " " << (*msg).data[1] << " " << (*msg).data[2] << " " << i++ << '\n';
 }
 
 int main(int argc, char **argv)
 {
-
   ros::init(argc, argv, "listener");
-
 
   ros::NodeHandle n;
 

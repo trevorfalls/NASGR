@@ -131,7 +131,7 @@ void loop()
 
     // read a packet from FIFO
     mpu.getFIFOBytes(fifoBuffer, packetSize);
-
+    
     // track FIFO count here in case there is > 1 packet available
     // (this lets us immediately read more without waiting for an interrupt)
     fifoCount -= packetSize;
@@ -145,16 +145,17 @@ void loop()
     {
       ypr[i]=ypr[i]*180/M_PI;
     }
+    
     mpu.resetFIFO();//TEST. REMOVE IF STUFF MESSES UP
                     //SHOULD BE FINE.
+    
 
     digitalWrite(ledPin, !digitalRead(ledPin));
     str_msg.data = ypr;
     chatter.publish( &str_msg );
     nh.spinOnce();
-    delay(100);
+    //delay(100);
     
   }
-
 }
 
