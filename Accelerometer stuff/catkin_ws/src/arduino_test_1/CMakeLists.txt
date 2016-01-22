@@ -189,3 +189,6 @@ include_directories(
 add_executable(listener_arduino src/listener.cpp)
 target_link_libraries(listener_arduino ${catkin_LIBRARIES})
 add_dependencies(listener_arduino arduino_test_1_generate_messages_cpp)
+add_executable(listener_arduino_ypr_realaccel src/listener_ypr_realaccel.cpp)
+target_link_libraries(listener_arduino_ypr_realaccel ${catkin_LIBRARIES})
+add_dependencies(listener_arduino_ypr_realaccel arduino_test_1_generate_messages_cpp)

@@ -1,4 +1,5 @@
 /home/yizhuang/catkin_ws/build/CMakeFiles/clean_test_results.dir
+/home/yizhuang/catkin_ws/build/CMakeFiles/clean_test_results_Project.dir
 /home/yizhuang/catkin_ws/build/CMakeFiles/download_extra_data.dir
 /home/yizhuang/catkin_ws/build/CMakeFiles/doxygen.dir
 /home/yizhuang/catkin_ws/build/gtest/CMakeFiles/gtest.dir
@@ -6,6 +7,7 @@
 /home/yizhuang/catkin_ws/build/beginner_tutorials/CMakeFiles/listener.dir
 /home/yizhuang/catkin_ws/build/test_1/CMakeFiles/listener1.dir
 /home/yizhuang/catkin_ws/build/arduino_test_1/CMakeFiles/listener_arduino.dir
+/home/yizhuang/catkin_ws/build/arduino_test_1/CMakeFiles/listener_arduino_ypr_realaccel.dir
 /home/yizhuang/catkin_ws/build/arduino_test_1/CMakeFiles/roscpp_generate_messages_cpp.dir
 /home/yizhuang/catkin_ws/build/arduino_test_1/CMakeFiles/roscpp_generate_messages_lisp.dir
 /home/yizhuang/catkin_ws/build/arduino_test_1/CMakeFiles/roscpp_generate_messages_py.dir

@@ -163,6 +163,19 @@ clean_test_results/fast:
 .PHONY : clean_test_results/fast
 
 #=============================================================================
+# Target rules for targets named clean_test_results_Project
+
+# Build rule for target.
+clean_test_results_Project: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 clean_test_results_Project
+.PHONY : clean_test_results_Project
+
+# fast build rule for target.
+clean_test_results_Project/fast:
+	$(MAKE) -f CMakeFiles/clean_test_results_Project.dir/build.make CMakeFiles/clean_test_results_Project.dir/build
+.PHONY : clean_test_results_Project/fast
+
+#=============================================================================
 # Target rules for targets named download_extra_data
 
 # Build rule for target.
@@ -252,6 +265,19 @@ listener_arduino: cmake_check_build_system
 listener_arduino/fast:
 	$(MAKE) -f arduino_test_1/CMakeFiles/listener_arduino.dir/build.make arduino_test_1/CMakeFiles/listener_arduino.dir/build
 .PHONY : listener_arduino/fast
+
+#=============================================================================
+# Target rules for targets named listener_arduino_ypr_realaccel
+
+# Build rule for target.
+listener_arduino_ypr_realaccel: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 listener_arduino_ypr_realaccel
+.PHONY : listener_arduino_ypr_realaccel
+
+# fast build rule for target.
+listener_arduino_ypr_realaccel/fast:
+	$(MAKE) -f arduino_test_1/CMakeFiles/listener_arduino_ypr_realaccel.dir/build.make arduino_test_1/CMakeFiles/listener_arduino_ypr_realaccel.dir/build
+.PHONY : listener_arduino_ypr_realaccel/fast
 
 #=============================================================================
 # Target rules for targets named roscpp_generate_messages_cpp
@@ -429,6 +455,7 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... clean_test_results"
+	@echo "... clean_test_results_Project"
 	@echo "... download_extra_data"
 	@echo "... doxygen"
 	@echo "... edit_cache"
@@ -443,6 +470,7 @@ help:
 	@echo "... gtest"
 	@echo "... gtest_main"
 	@echo "... listener_arduino"
+	@echo "... listener_arduino_ypr_realaccel"
 	@echo "... roscpp_generate_messages_cpp"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_py"
