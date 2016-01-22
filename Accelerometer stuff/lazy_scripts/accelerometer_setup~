@@ -1,0 +1,3 @@
+#!/bin/bash
+
+gnome-terminal -x sh -c "echo running source ./devel/setup.bash; source ./devel/setup.bash;echo Done;cd ~/catkin_ws/; exec bash";
