@@ -164,6 +164,20 @@ listener_arduino/fast:
 .PHONY : listener_arduino/fast
 
 # Convenience name for target.
+arduino_test_1/CMakeFiles/listener_arduino_ypr_realaccel.dir/rule:
+	cd /home/yizhuang/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduino_test_1/CMakeFiles/listener_arduino_ypr_realaccel.dir/rule
+.PHONY : arduino_test_1/CMakeFiles/listener_arduino_ypr_realaccel.dir/rule
+
+# Convenience name for target.
+listener_arduino_ypr_realaccel: arduino_test_1/CMakeFiles/listener_arduino_ypr_realaccel.dir/rule
+.PHONY : listener_arduino_ypr_realaccel
+
+# fast build rule for target.
+listener_arduino_ypr_realaccel/fast:
+	cd /home/yizhuang/catkin_ws/build && $(MAKE) -f arduino_test_1/CMakeFiles/listener_arduino_ypr_realaccel.dir/build.make arduino_test_1/CMakeFiles/listener_arduino_ypr_realaccel.dir/build
+.PHONY : listener_arduino_ypr_realaccel/fast
+
+# Convenience name for target.
 arduino_test_1/CMakeFiles/roscpp_generate_messages_cpp.dir/rule:
 	cd /home/yizhuang/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduino_test_1/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
 .PHONY : arduino_test_1/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
@@ -313,6 +327,30 @@ src/listener.cpp.s:
 	cd /home/yizhuang/catkin_ws/build && $(MAKE) -f arduino_test_1/CMakeFiles/listener_arduino.dir/build.make arduino_test_1/CMakeFiles/listener_arduino.dir/src/listener.cpp.s
 .PHONY : src/listener.cpp.s
 
+src/listener_ypr_realaccel.o: src/listener_ypr_realaccel.cpp.o
+.PHONY : src/listener_ypr_realaccel.o
+
+# target to build an object file
+src/listener_ypr_realaccel.cpp.o:
+	cd /home/yizhuang/catkin_ws/build && $(MAKE) -f arduino_test_1/CMakeFiles/listener_arduino_ypr_realaccel.dir/build.make arduino_test_1/CMakeFiles/listener_arduino_ypr_realaccel.dir/src/listener_ypr_realaccel.cpp.o
+.PHONY : src/listener_ypr_realaccel.cpp.o
+
+src/listener_ypr_realaccel.i: src/listener_ypr_realaccel.cpp.i
+.PHONY : src/listener_ypr_realaccel.i
+
+# target to preprocess a source file
+src/listener_ypr_realaccel.cpp.i:
+	cd /home/yizhuang/catkin_ws/build && $(MAKE) -f arduino_test_1/CMakeFiles/listener_arduino_ypr_realaccel.dir/build.make arduino_test_1/CMakeFiles/listener_arduino_ypr_realaccel.dir/src/listener_ypr_realaccel.cpp.i
+.PHONY : src/listener_ypr_realaccel.cpp.i
+
+src/listener_ypr_realaccel.s: src/listener_ypr_realaccel.cpp.s
+.PHONY : src/listener_ypr_realaccel.s
+
+# target to generate assembly for a file
+src/listener_ypr_realaccel.cpp.s:
+	cd /home/yizhuang/catkin_ws/build && $(MAKE) -f arduino_test_1/CMakeFiles/listener_arduino_ypr_realaccel.dir/build.make arduino_test_1/CMakeFiles/listener_arduino_ypr_realaccel.dir/src/listener_ypr_realaccel.cpp.s
+.PHONY : src/listener_ypr_realaccel.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -325,6 +363,7 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... listener_arduino"
+	@echo "... listener_arduino_ypr_realaccel"
 	@echo "... rebuild_cache"
 	@echo "... roscpp_generate_messages_cpp"
 	@echo "... roscpp_generate_messages_lisp"
@@ -339,6 +378,9 @@ help:
 	@echo "... src/listener.o"
 	@echo "... src/listener.i"
 	@echo "... src/listener.s"
+	@echo "... src/listener_ypr_realaccel.o"
+	@echo "... src/listener_ypr_realaccel.i"
+	@echo "... src/listener_ypr_realaccel.s"
 .PHONY : help
 
 
