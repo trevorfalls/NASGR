@@ -49,6 +49,7 @@ bool QNode::init() {
 	ros::NodeHandle n;
 	// Add your ros communications here.
 	chatter_publisher = n.advertise<std_msgs::String>("chatter", 1000);
+    cmd_publisher = n.advertise<std_msgs::String>("/gui_cmd", 1000);
 	start();
 	return true;
 }

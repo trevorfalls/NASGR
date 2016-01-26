@@ -73,6 +73,14 @@ void MainWindow::updateLoggingView() {
         //ui.view_logging->scrollToBottom();
 }
 
+void MainWindow::on_magicButton_pressed() {
+    ui.lineEdit->setText("Yes");
+}
+
+void MainWindow::on_magicButton_released() {
+    ui.lineEdit->setText("No");
+}
+
 /*****************************************************************************
 ** Implementation [Menu]
 *****************************************************************************/

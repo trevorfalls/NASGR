@@ -63,6 +63,7 @@ private:
 	int init_argc;
 	char** init_argv;
 	ros::Publisher chatter_publisher;
+    ros::Publisher cmd_publisher;
     QStringListModel logging_model;
 };
 
