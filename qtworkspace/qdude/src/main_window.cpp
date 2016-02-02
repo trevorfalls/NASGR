@@ -44,6 +44,14 @@ MainWindow::MainWindow(int argc, char** argv, QWidget *parent)
     //ui.view_logging->setModel(qnode.loggingModel());
     QObject::connect(&qnode, SIGNAL(loggingUpdated()), this, SLOT(updateLoggingView()));
 
+    //MAGIC
+    QObject::connect(ui.magicButton,SIGNAL(pressed()),&qnode,SLOT(magicSlotPressed()));
+    QObject::connect(ui.magicButton,SIGNAL(released()),&qnode,SLOT(magicSlotReleased()));
+
+    if(!qnode.init()) {
+        showNoMasterMessage();
+    }
+
 }
 
 MainWindow::~MainWindow() {}
@@ -73,13 +81,13 @@ void MainWindow::updateLoggingView() {
         //ui.view_logging->scrollToBottom();
 }
 
-void MainWindow::on_magicButton_pressed() {
+/*void MainWindow::on_magicButton_pressed() {
     ui.lineEdit->setText("Yes");
 }
 
 void MainWindow::on_magicButton_released() {
     ui.lineEdit->setText("No");
-}
+}*/
 
 /*****************************************************************************
 ** Implementation [Menu]

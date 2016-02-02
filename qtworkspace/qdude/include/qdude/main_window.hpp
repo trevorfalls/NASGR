@@ -52,8 +52,8 @@ public Q_SLOTS:
     *******************************************/
     void updateLoggingView(); // no idea why this can't connect automatically
 
-    void on_magicButton_pressed();
-    void on_magicButton_released();
+    //void on_magicButton_pressed();
+    //void on_magicButton_released();
 
 private:
 	Ui::MainWindowDesign ui;

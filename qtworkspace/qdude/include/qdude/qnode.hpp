@@ -59,6 +59,10 @@ Q_SIGNALS:
 	void loggingUpdated();
     void rosShutdown();
 
+public Q_SLOTS:
+    void magicSlotPressed();
+    void magicSlotReleased();
+
 private:
 	int init_argc;
 	char** init_argv;

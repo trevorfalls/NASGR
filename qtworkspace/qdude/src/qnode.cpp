@@ -16,6 +16,7 @@
 #include <std_msgs/String.h>
 #include <sstream>
 #include "../include/qdude/qnode.hpp"
+#include <QDebug>
 
 /*****************************************************************************
 ** Namespaces
@@ -42,6 +43,7 @@ QNode::~QNode() {
 
 bool QNode::init() {
 	ros::init(init_argc,init_argv,"qdude");
+    //qDebug() << "init1";
 	if ( ! ros::master::check() ) {
 		return false;
 	}
@@ -56,6 +58,7 @@ bool QNode::init() {
 
 bool QNode::init(const std::string &master_url, const std::string &host_url) {
 	std::map<std::string,std::string> remappings;
+    //qDebug() << "init2";
 	remappings["__master"] = master_url;
 	remappings["__hostname"] = host_url;
 	ros::init(remappings,"qdude");
@@ -66,6 +69,7 @@ bool QNode::init(const std::string &master_url, const std::string &host_url) {
 	ros::NodeHandle n;
 	// Add your ros communications here.
 	chatter_publisher = n.advertise<std_msgs::String>("chatter", 1000);
+    cmd_publisher = n.advertise<std_msgs::String>("/gui_cmd", 1000);
 	start();
 	return true;
 }
@@ -73,9 +77,10 @@ bool QNode::init(const std::string &master_url, const std::string &host_url) {
 void QNode::run() {
 	ros::Rate loop_rate(1);
 	int count = 0;
+    //qDebug() << "started to run";
 	while ( ros::ok() ) {
 
-		std_msgs::String msg;
+        /*std_msgs::String msg;
 		std::stringstream ss;
 		ss << "hello world " << count;
 		msg.data = ss.str();
@@ -83,7 +88,8 @@ void QNode::run() {
 		log(Info,std::string("I sent: ")+msg.data);
 		ros::spinOnce();
 		loop_rate.sleep();
-		++count;
+        ++count;*/
+        loop_rate.sleep();
 	}
 	std::cout << "Ros shutdown, proceeding to close the gui." << std::endl;
 	Q_EMIT rosShutdown(); // used to signal the gui for a shutdown (useful to roslaunch)
@@ -123,6 +129,26 @@ void QNode::log( const LogLevel &level, const std::string &msg) {
 	QVariant new_row(QString(logging_model_msg.str().c_str()));
 	logging_model.setData(logging_model.index(logging_model.rowCount()-1),new_row);
 	Q_EMIT loggingUpdated(); // used to readjust the scrollbar
+}
+
+void QNode::magicSlotPressed() {
+    std_msgs::String msg;
+    std::stringstream ss;
+    ss << "yes";
+    msg.data = ss.str();
+    cmd_publisher.publish(msg);
+
+    ros::spinOnce();
+}
+
+void QNode::magicSlotReleased() {
+    std_msgs::String msg;
+    std::stringstream ss;
+    ss << "no";
+    msg.data = ss.str();
+    cmd_publisher.publish(msg);
+
+    ros::spinOnce();
 }
 
 }  // namespace qdude
