@@ -18,6 +18,7 @@
 
 #include <ros/ros.h>
 #include <string>
+#include <sensor_msgs/Joy.h>
 #include <QThread>
 #include <QStringListModel>
 
@@ -58,6 +59,16 @@ public:
 Q_SIGNALS:
 	void loggingUpdated();
     void rosShutdown();
+    void buttonAPressed(bool);
+    void buttonBPressed(bool);
+    void buttonXPressed(bool);
+    void buttonYPressed(bool);
+    void leftTrigger(int);
+    void rightTrigger(int);
+    void leftControlV(int);
+    void leftControlH(int);
+    void rightControlV(int);
+    void rightControlH(int);
 
 public Q_SLOTS:
     void magicSlotPressed();
@@ -68,7 +79,9 @@ private:
 	char** init_argv;
 	ros::Publisher chatter_publisher;
     ros::Publisher cmd_publisher;
+    ros::Subscriber joy_subscriber;
     QStringListModel logging_model;
+    void joyCallback(const sensor_msgs::Joy::ConstPtr& joy);
 };
 
 }  // namespace qdude

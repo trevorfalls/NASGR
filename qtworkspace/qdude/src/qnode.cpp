@@ -14,6 +14,7 @@
 #include <ros/network.h>
 #include <string>
 #include <std_msgs/String.h>
+#include <sensor_msgs/Joy.h>
 #include <sstream>
 #include "../include/qdude/qnode.hpp"
 #include <QDebug>
@@ -27,6 +28,11 @@ namespace qdude {
 /*****************************************************************************
 ** Implementation
 *****************************************************************************/
+
+float map(float x, float in_min, float in_max, float out_min, float out_max)
+{
+  return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+}
 
 QNode::QNode(int argc, char** argv ) :
 	init_argc(argc),
@@ -52,6 +58,7 @@ bool QNode::init() {
 	// Add your ros communications here.
 	chatter_publisher = n.advertise<std_msgs::String>("chatter", 1000);
     cmd_publisher = n.advertise<std_msgs::String>("/gui_cmd", 1000);
+    joy_subscriber = n.subscribe<sensor_msgs::Joy>("joy",10,&QNode::joyCallback,this);
 	start();
 	return true;
 }
@@ -70,12 +77,13 @@ bool QNode::init(const std::string &master_url, const std::string &host_url) {
 	// Add your ros communications here.
 	chatter_publisher = n.advertise<std_msgs::String>("chatter", 1000);
     cmd_publisher = n.advertise<std_msgs::String>("/gui_cmd", 1000);
+    joy_subscriber = n.subscribe<sensor_msgs::Joy>("joy",10,&QNode::joyCallback,this);
 	start();
 	return true;
 }
 
 void QNode::run() {
-	ros::Rate loop_rate(1);
+    ros::Rate loop_rate(1);
 	int count = 0;
     //qDebug() << "started to run";
 	while ( ros::ok() ) {
@@ -89,7 +97,7 @@ void QNode::run() {
 		ros::spinOnce();
 		loop_rate.sleep();
         ++count;*/
-        loop_rate.sleep();
+        ros::spin();
 	}
 	std::cout << "Ros shutdown, proceeding to close the gui." << std::endl;
 	Q_EMIT rosShutdown(); // used to signal the gui for a shutdown (useful to roslaunch)
@@ -149,6 +157,19 @@ void QNode::magicSlotReleased() {
     cmd_publisher.publish(msg);
 
     ros::spinOnce();
+}
+
+void QNode::joyCallback(const sensor_msgs::Joy::ConstPtr& joy) {
+    Q_EMIT buttonAPressed(joy->buttons[0]);
+    Q_EMIT buttonBPressed(joy->buttons[1]);
+    Q_EMIT buttonXPressed(joy->buttons[2]);
+    Q_EMIT buttonYPressed(joy->buttons[3]);
+    Q_EMIT leftTrigger(map(joy->axes[5],-1,1,0,100));
+    Q_EMIT rightTrigger(map(joy->axes[4],-1,1,0,100));
+    Q_EMIT leftControlH(map(joy->axes[0],1,-1,0,100));
+    Q_EMIT leftControlV(map(joy->axes[1],-1,1,0,100));
+    Q_EMIT rightControlH(map(joy->axes[2],1,-1,0,100));
+    Q_EMIT rightControlV(map(joy->axes[3],-1,1,0,100));
 }
 
 }  // namespace qdude
