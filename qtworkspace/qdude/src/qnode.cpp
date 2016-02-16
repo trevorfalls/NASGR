@@ -17,6 +17,9 @@
 #include <sensor_msgs/Joy.h>
 #include <sstream>
 #include "../include/qdude/qnode.hpp"
+#include <image_transport/image_transport.h>
+#include <cv_bridge/cv_bridge.h>
+#include <sensor_msgs/image_encodings.h>
 #include <QDebug>
 
 /*****************************************************************************
@@ -54,11 +57,13 @@ bool QNode::init() {
 		return false;
 	}
 	ros::start(); // explicitly needed since our nodehandle is going out of scope.
-	ros::NodeHandle n;
+    ros::NodeHandle n;
 	// Add your ros communications here.
 	chatter_publisher = n.advertise<std_msgs::String>("chatter", 1000);
     cmd_publisher = n.advertise<std_msgs::String>("/gui_cmd", 1000);
     joy_subscriber = n.subscribe<sensor_msgs::Joy>("joy",10,&QNode::joyCallback,this);
+    image_transport::ImageTransport it_(n);
+    image_sub_ = it_.subscribe("/usb_cam/image_raw", 1, &QNode::imageCallback, this);
 	start();
 	return true;
 }
@@ -73,11 +78,13 @@ bool QNode::init(const std::string &master_url, const std::string &host_url) {
 		return false;
 	}
 	ros::start(); // explicitly needed since our nodehandle is going out of scope.
-	ros::NodeHandle n;
+    ros::NodeHandle n;
 	// Add your ros communications here.
 	chatter_publisher = n.advertise<std_msgs::String>("chatter", 1000);
     cmd_publisher = n.advertise<std_msgs::String>("/gui_cmd", 1000);
     joy_subscriber = n.subscribe<sensor_msgs::Joy>("joy",10,&QNode::joyCallback,this);
+    image_transport::ImageTransport it_(n);
+    image_sub_ = it_.subscribe("/usb_cam/image", 1, &QNode::imageCallback, this);
 	start();
 	return true;
 }
@@ -170,6 +177,45 @@ void QNode::joyCallback(const sensor_msgs::Joy::ConstPtr& joy) {
     Q_EMIT leftControlV(map(joy->axes[1],-1,1,0,100));
     Q_EMIT rightControlH(map(joy->axes[2],1,-1,0,100));
     Q_EMIT rightControlV(map(joy->axes[3],-1,1,0,100));
+}
+
+QImage QNode::cvtCvMat2QImage(const cv::Mat & image)
+{
+    QImage qtemp;
+    if(!image.empty() && image.depth() == CV_8U)
+    {
+        const unsigned char * data = image.data;
+        qtemp = QImage(image.cols, image.rows, QImage::Format_RGB32);
+        for(int y = 0; y < image.rows; ++y, data += image.cols*image.elemSize())
+        {
+            for(int x = 0; x < image.cols; ++x)
+            {
+                QRgb * p = ((QRgb*)qtemp.scanLine (y)) + x;
+                *p = qRgb(data[x * image.channels()+2], data[x * image.channels()+1], data[x * image.channels()]);
+            }
+        }
+    }
+    else if(!image.empty() && image.depth() != CV_8U)
+    {
+        printf("Wrong image format, must be 8_bits\n");
+    }
+    return qtemp;
+}
+
+void QNode::imageCallback(const sensor_msgs::ImageConstPtr& msg) {
+    cv_bridge::CvImagePtr cv_ptr;
+      try
+        {
+          cv_ptr = cv_bridge::toCvCopy(msg, sensor_msgs::image_encodings::BGR8);
+
+        }
+        catch (cv_bridge::Exception& e)
+        {
+          ROS_ERROR("cv_bridge exception: %s", e.what());
+          return;
+        }
+    px = QPixmap::fromImage(cvtCvMat2QImage(cv_ptr->image));
+    Q_EMIT Update_Image(&px);
 }
 
 }  // namespace qdude

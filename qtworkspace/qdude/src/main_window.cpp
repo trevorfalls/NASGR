@@ -26,9 +26,9 @@ using namespace Qt;
 ** Implementation [MainWindow]
 *****************************************************************************/
 
-MainWindow::MainWindow(int argc, char** argv, QWidget *parent)
+MainWindow::MainWindow(QNode *node, QWidget *parent)
 	: QMainWindow(parent)
-	, qnode(argc,argv)
+    , qnode(node)
 {
 	ui.setupUi(this); // Calling this incidentally connects all ui's triggers to on_...() callbacks in this class.
     QObject::connect(ui.actionAbout_Qt, SIGNAL(triggered(bool)), qApp, SLOT(aboutQt())); // qApp is a global variable for the application
@@ -36,32 +36,33 @@ MainWindow::MainWindow(int argc, char** argv, QWidget *parent)
     ReadSettings();
 	setWindowIcon(QIcon(":/images/icon.png"));
     //ui.tab_manager->setCurrentIndex(0); // ensure the first tab is showing - qt-designer should have this already hardwired, but often loses it (settings?).
-    QObject::connect(&qnode, SIGNAL(rosShutdown()), this, SLOT(close()));
+    QObject::connect(qnode, SIGNAL(rosShutdown()), this, SLOT(close()));
 
 	/*********************
 	** Logging
 	**********************/
     //ui.view_logging->setModel(qnode.loggingModel());
-    QObject::connect(&qnode, SIGNAL(loggingUpdated()), this, SLOT(updateLoggingView()));
+    ui.imageLabel->setPixmap(qnode->PixmapModel());
+    QObject::connect(qnode, SIGNAL(loggingUpdated()), this, SLOT(updateLoggingView()));
 
     //MAGIC
-    QObject::connect(ui.magicButton,SIGNAL(pressed()),&qnode,SLOT(magicSlotPressed()));
-    QObject::connect(ui.magicButton,SIGNAL(released()),&qnode,SLOT(magicSlotReleased()));
+    QObject::connect(ui.magicButton,SIGNAL(pressed()),qnode,SLOT(magicSlotPressed()));
+    QObject::connect(ui.magicButton,SIGNAL(released()),qnode,SLOT(magicSlotReleased()));
 
     //XBOX
-    QObject::connect(&qnode,SIGNAL(buttonAPressed(bool)),ui.checkA,SLOT(setChecked(bool)));
-    QObject::connect(&qnode,SIGNAL(buttonBPressed(bool)),ui.checkB,SLOT(setChecked(bool)));
-    QObject::connect(&qnode,SIGNAL(buttonXPressed(bool)),ui.checkX,SLOT(setChecked(bool)));
-    QObject::connect(&qnode,SIGNAL(buttonYPressed(bool)),ui.checkY,SLOT(setChecked(bool)));
-    QObject::connect(&qnode,SIGNAL(leftTrigger(int)),ui.leftTrigger,SLOT(setValue(int)));
-    QObject::connect(&qnode,SIGNAL(rightTrigger(int)),ui.rightTrigger,SLOT(setValue(int)));
-    QObject::connect(&qnode,SIGNAL(leftControlV(int)),ui.leftControlV,SLOT(setValue(int)));
-    QObject::connect(&qnode,SIGNAL(leftControlH(int)),ui.leftControlH,SLOT(setValue(int)));
-    QObject::connect(&qnode,SIGNAL(rightControlV(int)),ui.rightControlV,SLOT(setValue(int)));
-    QObject::connect(&qnode,SIGNAL(rightControlH(int)),ui.rightControlH,SLOT(setValue(int)));
+    QObject::connect(qnode,SIGNAL(buttonAPressed(bool)),ui.checkA,SLOT(setChecked(bool)));
+    QObject::connect(qnode,SIGNAL(buttonBPressed(bool)),ui.checkB,SLOT(setChecked(bool)));
+    QObject::connect(qnode,SIGNAL(buttonXPressed(bool)),ui.checkX,SLOT(setChecked(bool)));
+    QObject::connect(qnode,SIGNAL(buttonYPressed(bool)),ui.checkY,SLOT(setChecked(bool)));
+    QObject::connect(qnode,SIGNAL(leftTrigger(int)),ui.leftTrigger,SLOT(setValue(int)));
+    QObject::connect(qnode,SIGNAL(rightTrigger(int)),ui.rightTrigger,SLOT(setValue(int)));
+    QObject::connect(qnode,SIGNAL(leftControlV(int)),ui.leftControlV,SLOT(setValue(int)));
+    QObject::connect(qnode,SIGNAL(leftControlH(int)),ui.leftControlH,SLOT(setValue(int)));
+    QObject::connect(qnode,SIGNAL(rightControlV(int)),ui.rightControlV,SLOT(setValue(int)));
+    QObject::connect(qnode,SIGNAL(rightControlH(int)),ui.rightControlH,SLOT(setValue(int)));
+    QObject::connect(qnode,SIGNAL(Update_Image(const QPixmap*)),this,SLOT(updatePixmap(const QPixmap*)));
 
-
-    if(!qnode.init()) {
+    if(!qnode->init()) {
         showNoMasterMessage();
     }
 
@@ -151,6 +152,11 @@ void MainWindow::closeEvent(QCloseEvent *event)
 {
 	WriteSettings();
 	QMainWindow::closeEvent(event);
+}
+
+void MainWindow::updatePixmap(const QPixmap* image)
+{
+    ui.imageLabel->setPixmap(*image);
 }
 
 }  // namespace qdude

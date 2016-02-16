@@ -32,7 +32,7 @@ class MainWindow : public QMainWindow {
 Q_OBJECT
 
 public:
-	MainWindow(int argc, char** argv, QWidget *parent = 0);
+    MainWindow(QNode *node, QWidget *parent = 0);
 	~MainWindow();
 
 	void ReadSettings(); // Load up qt program settings at startup
@@ -54,10 +54,11 @@ public Q_SLOTS:
 
     //void on_magicButton_pressed();
     //void on_magicButton_released();
+    void updatePixmap(const QPixmap* image);
 
 private:
 	Ui::MainWindowDesign ui;
-	QNode qnode;
+    QNode *qnode;
 };
 
 }  // namespace qdude
