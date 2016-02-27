@@ -119,12 +119,15 @@ MPU6050 mpu;
 
 #define LED_PIN 13 // (Arduino is 13, Teensy is 11, Teensy++ is 6)
 bool blinkState = false;
+
+//ROS STUFF-------------
 int ROSiteration = 0; //when reaches 100, sends data through ROS
 
 ros::NodeHandle  nh;
 
 std_msgs::Float32MultiArray str_msg;
 ros::Publisher chatter("chatter", &str_msg);
+float ROSdata[6];//storage for yaw, pitch, roll, and x-acceleration, y-acceleration, and z-acceleration
 
 // MPU control/status vars
 bool dmpReady = false;  // set true if DMP init was successful
@@ -213,17 +216,19 @@ void setup() {
   pinMode(LED_PIN, OUTPUT);
   
   //--------------------------------------------ROS STUFF---------------
-  nh.initNode();
-  str_msg.layout.dim = (std_msgs::MultiArrayDimension *)
-    malloc(sizeof(std_msgs::MultiArrayDimension) * 2);
-  str_msg.layout.dim[0].label = "hello";
+  //FOR FUTURE READERS: Figure out what these mean and put whaty you find someplace very safe. 
+  //It looks like this whole block is needed to format a float into a string to send through ROS
+  nh.initNode();//initializing node or something
+  str_msg.layout.dim = (std_msgs::MultiArrayDimension *)//??
+    malloc(sizeof(std_msgs::MultiArrayDimension) * 2);//??
+  str_msg.layout.dim[0].label = "hello";//probably should change this
   str_msg.layout.dim[0].size = 6;//previously 3. testing stuff right now
-  str_msg.layout.dim[0].stride = 6;//previously 3
-  str_msg.layout.data_offset = 0;
-  str_msg.data = (float *)malloc(sizeof(float)*6);//previously 33
-  //str_msg.layout.dim_length = 1;
+  str_msg.layout.dim[0].stride = 3;//previously 3
+  str_msg.layout.data_offset = 0;//??
+  str_msg.data = (float *)malloc(sizeof(float)*6);//previously 3
+  //str_msg.layout.dim_length = 1; //??
   str_msg.data_length = 6;//previously 3
-  nh.advertise(chatter);
+  nh.advertise(chatter);//name of channel(?) 
 }
 
 
@@ -331,10 +336,14 @@ void loop() {
   //--------------ROS STUFF
   if (ROSiteration == 10)
   {
-  for (int i = 0; i < 3; i++)
+  for (int i = 0; i < 3; i++)//for getting yaw pitch roll ready to be sent through ROS
   {
     ypr[i]=ypr[i]*180/M_PI;
+    ROSdata[i]=ypr[i];
   }
+  ypr[3] = aaReal.x;
+  ypr[4] = aaReal.y;
+  ypr[5] = aaReal.z;//Real world accelerations
   digitalWrite(ledPin, !digitalRead(ledPin));
   str_msg.data = ypr;
   chatter.publish( &str_msg );

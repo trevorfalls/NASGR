@@ -178,6 +178,48 @@ listener_arduino_ypr_realaccel/fast:
 .PHONY : listener_arduino_ypr_realaccel/fast
 
 # Convenience name for target.
+arduino_test_1/CMakeFiles/listener_arduino_ypr_realaccel_deviation.dir/rule:
+	cd /home/yizhuang/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduino_test_1/CMakeFiles/listener_arduino_ypr_realaccel_deviation.dir/rule
+.PHONY : arduino_test_1/CMakeFiles/listener_arduino_ypr_realaccel_deviation.dir/rule
+
+# Convenience name for target.
+listener_arduino_ypr_realaccel_deviation: arduino_test_1/CMakeFiles/listener_arduino_ypr_realaccel_deviation.dir/rule
+.PHONY : listener_arduino_ypr_realaccel_deviation
+
+# fast build rule for target.
+listener_arduino_ypr_realaccel_deviation/fast:
+	cd /home/yizhuang/catkin_ws/build && $(MAKE) -f arduino_test_1/CMakeFiles/listener_arduino_ypr_realaccel_deviation.dir/build.make arduino_test_1/CMakeFiles/listener_arduino_ypr_realaccel_deviation.dir/build
+.PHONY : listener_arduino_ypr_realaccel_deviation/fast
+
+# Convenience name for target.
+arduino_test_1/CMakeFiles/listener_y_only.dir/rule:
+	cd /home/yizhuang/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduino_test_1/CMakeFiles/listener_y_only.dir/rule
+.PHONY : arduino_test_1/CMakeFiles/listener_y_only.dir/rule
+
+# Convenience name for target.
+listener_y_only: arduino_test_1/CMakeFiles/listener_y_only.dir/rule
+.PHONY : listener_y_only
+
+# fast build rule for target.
+listener_y_only/fast:
+	cd /home/yizhuang/catkin_ws/build && $(MAKE) -f arduino_test_1/CMakeFiles/listener_y_only.dir/build.make arduino_test_1/CMakeFiles/listener_y_only.dir/build
+.PHONY : listener_y_only/fast
+
+# Convenience name for target.
+arduino_test_1/CMakeFiles/listener_ypr_accel_vel.dir/rule:
+	cd /home/yizhuang/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduino_test_1/CMakeFiles/listener_ypr_accel_vel.dir/rule
+.PHONY : arduino_test_1/CMakeFiles/listener_ypr_accel_vel.dir/rule
+
+# Convenience name for target.
+listener_ypr_accel_vel: arduino_test_1/CMakeFiles/listener_ypr_accel_vel.dir/rule
+.PHONY : listener_ypr_accel_vel
+
+# fast build rule for target.
+listener_ypr_accel_vel/fast:
+	cd /home/yizhuang/catkin_ws/build && $(MAKE) -f arduino_test_1/CMakeFiles/listener_ypr_accel_vel.dir/build.make arduino_test_1/CMakeFiles/listener_ypr_accel_vel.dir/build
+.PHONY : listener_ypr_accel_vel/fast
+
+# Convenience name for target.
 arduino_test_1/CMakeFiles/roscpp_generate_messages_cpp.dir/rule:
 	cd /home/yizhuang/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduino_test_1/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
 .PHONY : arduino_test_1/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
@@ -327,6 +369,54 @@ src/listener.cpp.s:
 	cd /home/yizhuang/catkin_ws/build && $(MAKE) -f arduino_test_1/CMakeFiles/listener_arduino.dir/build.make arduino_test_1/CMakeFiles/listener_arduino.dir/src/listener.cpp.s
 .PHONY : src/listener.cpp.s
 
+src/listener_y_only.o: src/listener_y_only.cpp.o
+.PHONY : src/listener_y_only.o
+
+# target to build an object file
+src/listener_y_only.cpp.o:
+	cd /home/yizhuang/catkin_ws/build && $(MAKE) -f arduino_test_1/CMakeFiles/listener_y_only.dir/build.make arduino_test_1/CMakeFiles/listener_y_only.dir/src/listener_y_only.cpp.o
+.PHONY : src/listener_y_only.cpp.o
+
+src/listener_y_only.i: src/listener_y_only.cpp.i
+.PHONY : src/listener_y_only.i
+
+# target to preprocess a source file
+src/listener_y_only.cpp.i:
+	cd /home/yizhuang/catkin_ws/build && $(MAKE) -f arduino_test_1/CMakeFiles/listener_y_only.dir/build.make arduino_test_1/CMakeFiles/listener_y_only.dir/src/listener_y_only.cpp.i
+.PHONY : src/listener_y_only.cpp.i
+
+src/listener_y_only.s: src/listener_y_only.cpp.s
+.PHONY : src/listener_y_only.s
+
+# target to generate assembly for a file
+src/listener_y_only.cpp.s:
+	cd /home/yizhuang/catkin_ws/build && $(MAKE) -f arduino_test_1/CMakeFiles/listener_y_only.dir/build.make arduino_test_1/CMakeFiles/listener_y_only.dir/src/listener_y_only.cpp.s
+.PHONY : src/listener_y_only.cpp.s
+
+src/listener_ypr_accel_vel.o: src/listener_ypr_accel_vel.cpp.o
+.PHONY : src/listener_ypr_accel_vel.o
+
+# target to build an object file
+src/listener_ypr_accel_vel.cpp.o:
+	cd /home/yizhuang/catkin_ws/build && $(MAKE) -f arduino_test_1/CMakeFiles/listener_ypr_accel_vel.dir/build.make arduino_test_1/CMakeFiles/listener_ypr_accel_vel.dir/src/listener_ypr_accel_vel.cpp.o
+.PHONY : src/listener_ypr_accel_vel.cpp.o
+
+src/listener_ypr_accel_vel.i: src/listener_ypr_accel_vel.cpp.i
+.PHONY : src/listener_ypr_accel_vel.i
+
+# target to preprocess a source file
+src/listener_ypr_accel_vel.cpp.i:
+	cd /home/yizhuang/catkin_ws/build && $(MAKE) -f arduino_test_1/CMakeFiles/listener_ypr_accel_vel.dir/build.make arduino_test_1/CMakeFiles/listener_ypr_accel_vel.dir/src/listener_ypr_accel_vel.cpp.i
+.PHONY : src/listener_ypr_accel_vel.cpp.i
+
+src/listener_ypr_accel_vel.s: src/listener_ypr_accel_vel.cpp.s
+.PHONY : src/listener_ypr_accel_vel.s
+
+# target to generate assembly for a file
+src/listener_ypr_accel_vel.cpp.s:
+	cd /home/yizhuang/catkin_ws/build && $(MAKE) -f arduino_test_1/CMakeFiles/listener_ypr_accel_vel.dir/build.make arduino_test_1/CMakeFiles/listener_ypr_accel_vel.dir/src/listener_ypr_accel_vel.cpp.s
+.PHONY : src/listener_ypr_accel_vel.cpp.s
+
 src/listener_ypr_realaccel.o: src/listener_ypr_realaccel.cpp.o
 .PHONY : src/listener_ypr_realaccel.o
 
@@ -351,6 +441,30 @@ src/listener_ypr_realaccel.cpp.s:
 	cd /home/yizhuang/catkin_ws/build && $(MAKE) -f arduino_test_1/CMakeFiles/listener_arduino_ypr_realaccel.dir/build.make arduino_test_1/CMakeFiles/listener_arduino_ypr_realaccel.dir/src/listener_ypr_realaccel.cpp.s
 .PHONY : src/listener_ypr_realaccel.cpp.s
 
+src/listener_ypr_realaccel_deviation.o: src/listener_ypr_realaccel_deviation.cpp.o
+.PHONY : src/listener_ypr_realaccel_deviation.o
+
+# target to build an object file
+src/listener_ypr_realaccel_deviation.cpp.o:
+	cd /home/yizhuang/catkin_ws/build && $(MAKE) -f arduino_test_1/CMakeFiles/listener_arduino_ypr_realaccel_deviation.dir/build.make arduino_test_1/CMakeFiles/listener_arduino_ypr_realaccel_deviation.dir/src/listener_ypr_realaccel_deviation.cpp.o
+.PHONY : src/listener_ypr_realaccel_deviation.cpp.o
+
+src/listener_ypr_realaccel_deviation.i: src/listener_ypr_realaccel_deviation.cpp.i
+.PHONY : src/listener_ypr_realaccel_deviation.i
+
+# target to preprocess a source file
+src/listener_ypr_realaccel_deviation.cpp.i:
+	cd /home/yizhuang/catkin_ws/build && $(MAKE) -f arduino_test_1/CMakeFiles/listener_arduino_ypr_realaccel_deviation.dir/build.make arduino_test_1/CMakeFiles/listener_arduino_ypr_realaccel_deviation.dir/src/listener_ypr_realaccel_deviation.cpp.i
+.PHONY : src/listener_ypr_realaccel_deviation.cpp.i
+
+src/listener_ypr_realaccel_deviation.s: src/listener_ypr_realaccel_deviation.cpp.s
+.PHONY : src/listener_ypr_realaccel_deviation.s
+
+# target to generate assembly for a file
+src/listener_ypr_realaccel_deviation.cpp.s:
+	cd /home/yizhuang/catkin_ws/build && $(MAKE) -f arduino_test_1/CMakeFiles/listener_arduino_ypr_realaccel_deviation.dir/build.make arduino_test_1/CMakeFiles/listener_arduino_ypr_realaccel_deviation.dir/src/listener_ypr_realaccel_deviation.cpp.s
+.PHONY : src/listener_ypr_realaccel_deviation.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -364,6 +478,9 @@ help:
 	@echo "... list_install_components"
 	@echo "... listener_arduino"
 	@echo "... listener_arduino_ypr_realaccel"
+	@echo "... listener_arduino_ypr_realaccel_deviation"
+	@echo "... listener_y_only"
+	@echo "... listener_ypr_accel_vel"
 	@echo "... rebuild_cache"
 	@echo "... roscpp_generate_messages_cpp"
 	@echo "... roscpp_generate_messages_lisp"
@@ -378,9 +495,18 @@ help:
 	@echo "... src/listener.o"
 	@echo "... src/listener.i"
 	@echo "... src/listener.s"
+	@echo "... src/listener_y_only.o"
+	@echo "... src/listener_y_only.i"
+	@echo "... src/listener_y_only.s"
+	@echo "... src/listener_ypr_accel_vel.o"
+	@echo "... src/listener_ypr_accel_vel.i"
+	@echo "... src/listener_ypr_accel_vel.s"
 	@echo "... src/listener_ypr_realaccel.o"
 	@echo "... src/listener_ypr_realaccel.i"
 	@echo "... src/listener_ypr_realaccel.s"
+	@echo "... src/listener_ypr_realaccel_deviation.o"
+	@echo "... src/listener_ypr_realaccel_deviation.i"
+	@echo "... src/listener_ypr_realaccel_deviation.s"
 .PHONY : help
 
 

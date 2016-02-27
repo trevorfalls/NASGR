@@ -38,3 +38,6 @@ Yaw is apparently very hard to measure (when nothing changes with respect to the
 It looks like there's already code out there that does most of what I want. Looking at http://diyhacking.com/arduino-mpu-6050-imu-sensor-tutorial/ 
 
 YAY! IT WORKED! THE site above got me the code I needed to read yaw, pitch, and roll. My next goal is to, upon a button press, record the initial orientation and then continuously calculate the offset from that initial orientation until the next button press.
+
+Stuff I accomplished today(10/29/2015):
+Created a system where, when "1" is sent through the serial window, the offset program is toggled on/off.

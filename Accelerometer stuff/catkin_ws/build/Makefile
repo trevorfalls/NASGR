@@ -280,6 +280,45 @@ listener_arduino_ypr_realaccel/fast:
 .PHONY : listener_arduino_ypr_realaccel/fast
 
 #=============================================================================
+# Target rules for targets named listener_arduino_ypr_realaccel_deviation
+
+# Build rule for target.
+listener_arduino_ypr_realaccel_deviation: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 listener_arduino_ypr_realaccel_deviation
+.PHONY : listener_arduino_ypr_realaccel_deviation
+
+# fast build rule for target.
+listener_arduino_ypr_realaccel_deviation/fast:
+	$(MAKE) -f arduino_test_1/CMakeFiles/listener_arduino_ypr_realaccel_deviation.dir/build.make arduino_test_1/CMakeFiles/listener_arduino_ypr_realaccel_deviation.dir/build
+.PHONY : listener_arduino_ypr_realaccel_deviation/fast
+
+#=============================================================================
+# Target rules for targets named listener_y_only
+
+# Build rule for target.
+listener_y_only: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 listener_y_only
+.PHONY : listener_y_only
+
+# fast build rule for target.
+listener_y_only/fast:
+	$(MAKE) -f arduino_test_1/CMakeFiles/listener_y_only.dir/build.make arduino_test_1/CMakeFiles/listener_y_only.dir/build
+.PHONY : listener_y_only/fast
+
+#=============================================================================
+# Target rules for targets named listener_ypr_accel_vel
+
+# Build rule for target.
+listener_ypr_accel_vel: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 listener_ypr_accel_vel
+.PHONY : listener_ypr_accel_vel
+
+# fast build rule for target.
+listener_ypr_accel_vel/fast:
+	$(MAKE) -f arduino_test_1/CMakeFiles/listener_ypr_accel_vel.dir/build.make arduino_test_1/CMakeFiles/listener_ypr_accel_vel.dir/build
+.PHONY : listener_ypr_accel_vel/fast
+
+#=============================================================================
 # Target rules for targets named roscpp_generate_messages_cpp
 
 # Build rule for target.
@@ -471,6 +510,9 @@ help:
 	@echo "... gtest_main"
 	@echo "... listener_arduino"
 	@echo "... listener_arduino_ypr_realaccel"
+	@echo "... listener_arduino_ypr_realaccel_deviation"
+	@echo "... listener_y_only"
+	@echo "... listener_ypr_accel_vel"
 	@echo "... roscpp_generate_messages_cpp"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_py"

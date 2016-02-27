@@ -300,6 +300,12 @@ gtest_force_shared_crt:BOOL=OFF
 //Dependencies for the target
 gtest_main_LIB_DEPENDS:STATIC=general;-lpthread;general;gtest;
 
+//Value Computed by CMake
+joy_BINARY_DIR:STATIC=/home/yizhuang/catkin_ws/build/joy
+
+//Value Computed by CMake
+joy_SOURCE_DIR:STATIC=/home/yizhuang/catkin_ws/src/joy
+
 //Path to a library.
 lib:FILEPATH=/opt/ros/indigo/lib/libxmlrpcpp.so
 
