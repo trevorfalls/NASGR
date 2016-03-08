@@ -55,6 +55,7 @@ public Q_SLOTS:
     //void on_magicButton_pressed();
     //void on_magicButton_released();
     void updatePixmap(const QPixmap* image);
+    void updateCam(int cam);
 
 private:
 	Ui::MainWindowDesign ui;

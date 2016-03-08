@@ -77,6 +77,7 @@ Q_SIGNALS:
     void rightControlV(int);
     void rightControlH(int);
     void Update_Image(const QPixmap* image);
+    void Update_Active_Cam(int);
 
 public Q_SLOTS:
     void magicSlotPressed();
@@ -86,9 +87,11 @@ private:
 	int init_argc;
 	char** init_argv;
     image_transport::Subscriber image_sub_;
+    image_transport::ImageTransport *it_;
     QPixmap px;
 	ros::Publisher chatter_publisher;
     ros::Publisher cmd_publisher;
+    ros::ServiceClient camToggle_client;
     ros::Subscriber joy_subscriber;
     QImage cvtCvMat2QImage(const cv::Mat & image);
     void imageCallback(const sensor_msgs::ImageConstPtr& msg);

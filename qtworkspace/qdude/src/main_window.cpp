@@ -61,6 +61,8 @@ MainWindow::MainWindow(QNode *node, QWidget *parent)
     QObject::connect(qnode,SIGNAL(rightControlV(int)),ui.rightControlV,SLOT(setValue(int)));
     QObject::connect(qnode,SIGNAL(rightControlH(int)),ui.rightControlH,SLOT(setValue(int)));
     QObject::connect(qnode,SIGNAL(Update_Image(const QPixmap*)),this,SLOT(updatePixmap(const QPixmap*)));
+    QObject::connect(qnode,SIGNAL(Update_Active_Cam(int)),this,SLOT(updateCam(int)));
+    ui.activeCam->setText("0");
 
     if(!qnode->init()) {
         showNoMasterMessage();
@@ -157,6 +159,10 @@ void MainWindow::closeEvent(QCloseEvent *event)
 void MainWindow::updatePixmap(const QPixmap* image)
 {
     ui.imageLabel->setPixmap(*image);
+}
+
+void MainWindow::updateCam(int cam) {
+    ui.activeCam->setText(QString::number(cam));
 }
 
 }  // namespace qdude
