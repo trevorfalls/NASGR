@@ -1,0 +1,31 @@
+#include "ros/ros.h"
+#include "std_msgs/Float32MultiArray.h"
+#include <iostream>
+#include <iomanip>
+#include <time.h>
+
+int i = 0;
+time_t starttime;
+
+void chatterCallback(const std_msgs::Float32MultiArray::Ptr & msg)
+{
+if (i%250 == 0)
+{
+  std::cout << std::setprecision(10) << std::fixed << (*msg).data[0] << " " << difftime(time(NULL),starttime) << '\n';
+}
+i++;
+}
+
+int main(int argc, char **argv)
+{
+time(&starttime);
+  ros::init(argc, argv, "listener");
+
+  ros::NodeHandle n;
+
+  ros::Subscriber sub = n.subscribe("chatter", 1000, chatterCallback);
+
+  ros::spin();
+
+  return 0;
+}

@@ -1,0 +1,662 @@
+ypr deviation:    0.000    0.000    0.000   xyzaccel deviation:  0.000000  0.000000  0.000000  1 
+xyzaccel average:  0.000000  0.000000  0.000000
+ypr deviation:   -0.001   -0.007   -0.002   xyzaccel deviation:  0.000061  0.000122 -0.001282  1 
+xyzaccel average:  0.000006  0.000012 -0.000128
+ypr deviation:    0.004   -0.005   -0.009   xyzaccel deviation:  0.000671  0.000244 -0.000183  1 
+xyzaccel average:  0.000073  0.000037 -0.000146
+ypr deviation:    0.003   -0.005   -0.009   xyzaccel deviation:  0.000244  0.000427 -0.000061  1 
+xyzaccel average:  0.000098  0.000079 -0.000153
+ypr deviation:    0.003   -0.007   -0.002   xyzaccel deviation:  0.000793  0.000427 -0.000427  1 
+xyzaccel average:  0.000177  0.000122 -0.000195
+ypr deviation:    0.002   -0.009    0.005   xyzaccel deviation:  0.000427  0.000671 -0.000366  1 
+xyzaccel average:  0.000220  0.000189 -0.000232
+ypr deviation:    0.001   -0.007   -0.002   xyzaccel deviation:  0.000854  0.000183 -0.000732  1 
+xyzaccel average:  0.000305  0.000208 -0.000305
+ypr deviation:   -0.005   -0.002    0.007   xyzaccel deviation:  0.000671  0.000427 -0.000366  2 
+xyzaccel average:  0.000372  0.000250 -0.000342
+ypr deviation:   -0.006    0.000    0.000   xyzaccel deviation:  0.000732  0.000122 -0.000305  2 
+xyzaccel average:  0.000446  0.000262 -0.000372
+ypr deviation:   -0.007   -0.002    0.007   xyzaccel deviation:  0.000244  0.000427 -0.000061  2 
+xyzaccel average:  0.000470  0.000305 -0.000378
+ypr deviation:   -0.007   -0.002    0.007   xyzaccel deviation:  0.000244  0.000244  0.000000  2 
+xyzaccel average:  0.000494  0.000330 -0.000378
+ypr deviation:   -0.002    0.005    0.009   xyzaccel deviation:  0.000793  0.000305 -0.000122  2 
+xyzaccel average:  0.000568  0.000348 -0.000262
+ypr deviation:   -0.009   -0.002    0.007   xyzaccel deviation:  0.000244  0.000183 -0.000183  2 
+xyzaccel average:  0.000525  0.000342 -0.000262
+ypr deviation:   -0.009    0.005    0.009   xyzaccel deviation:  0.000549  0.000122 -0.000977  2 
+xyzaccel average:  0.000555  0.000311 -0.000354
+ypr deviation:   -0.010   -0.002    0.007   xyzaccel deviation:  0.000000  0.000916 -0.000244  3 
+xyzaccel average:  0.000476  0.000360 -0.000336
+ypr deviation:   -0.011   -0.004    0.013   xyzaccel deviation:  0.000366  0.000610 -0.000244  3 
+xyzaccel average:  0.000470  0.000354 -0.000323
+ypr deviation:   -0.012   -0.004    0.013   xyzaccel deviation:  0.000793  0.000427 -0.000244  3 
+xyzaccel average:  0.000464  0.000378 -0.000275
+ypr deviation:   -0.012   -0.002    0.007   xyzaccel deviation:  0.001526  0.000671 -0.000671  3 
+xyzaccel average:  0.000549  0.000403 -0.000305
+ypr deviation:   -0.007   -0.002    0.007   xyzaccel deviation:  0.001038  0.000061 -0.000244  3 
+xyzaccel average:  0.000580  0.000397 -0.000299
+ypr deviation:   -0.008   -0.002    0.007   xyzaccel deviation:  0.001099  0.000305 -0.000305  3 
+xyzaccel average:  0.000665  0.000385 -0.000323
+ypr deviation:   -0.009    0.007    0.002   xyzaccel deviation:  0.000671  0.000305 -0.000305  4 
+xyzaccel average:  0.000708  0.000391 -0.000354
+ypr deviation:   -0.010   -0.000    0.000   xyzaccel deviation: -0.000061  0.000305 -0.000610  4 
+xyzaccel average:  0.000623  0.000391 -0.000403
+ypr deviation:   -0.005    0.007    0.002   xyzaccel deviation:  0.000305 -0.000122 -0.000732  4 
+xyzaccel average:  0.000629  0.000360 -0.000458
+ypr deviation:   -0.005   -0.000    0.000   xyzaccel deviation:  0.000061 -0.000244 -0.000671  4 
+xyzaccel average:  0.000580  0.000323 -0.000427
+ypr deviation:   -0.006    0.002   -0.006   xyzaccel deviation: -0.000061  0.000122 -0.000427  4 
+xyzaccel average:  0.000574  0.000244 -0.000446
+ypr deviation:   -0.007    0.002   -0.006   xyzaccel deviation:  0.000000  0.000305 -0.000366  4 
+xyzaccel average:  0.000537  0.000214 -0.000458
+ypr deviation:   -0.008    0.002   -0.006   xyzaccel deviation:  0.000488 -0.000061 -0.000427  4 
+xyzaccel average:  0.000507  0.000165 -0.000476
+ypr deviation:   -0.008    0.002   -0.006   xyzaccel deviation:  0.000000  0.000305 -0.000244  5 
+xyzaccel average:  0.000354  0.000128 -0.000433
+ypr deviation:   -0.009    0.002   -0.006   xyzaccel deviation:  0.000427 -0.000061 -0.001038  5 
+xyzaccel average:  0.000293  0.000116 -0.000513
+ypr deviation:   -0.010    0.002   -0.006   xyzaccel deviation:  0.000122  0.000244 -0.000732  5 
+xyzaccel average:  0.000195  0.000110 -0.000555
+ypr deviation:   -0.010    0.002   -0.006   xyzaccel deviation:  0.000122  0.000183 -0.000122  5 
+xyzaccel average:  0.000140  0.000098 -0.000537
+ypr deviation:   -0.011   -0.005   -0.008   xyzaccel deviation: -0.000122  0.000061 -0.000549  5 
+xyzaccel average:  0.000134  0.000073 -0.000531
+ypr deviation:   -0.012   -0.005   -0.008   xyzaccel deviation:  0.000000  0.000305 -0.000427  5 
+xyzaccel average:  0.000104  0.000116 -0.000500
+ypr deviation:   -0.013   -0.007   -0.002   xyzaccel deviation:  0.000305  0.000610 -0.000427  5 
+xyzaccel average:  0.000128  0.000201 -0.000476
+ypr deviation:   -0.013   -0.000    0.000   xyzaccel deviation:  0.000610  0.000244 -0.000488  6 
+xyzaccel average:  0.000195  0.000214 -0.000482
+ypr deviation:   -0.014   -0.000    0.000   xyzaccel deviation:  0.000183  0.000488 -0.000488  6 
+xyzaccel average:  0.000214  0.000232 -0.000494
+ypr deviation:   -0.015   -0.007   -0.002   xyzaccel deviation:  0.000183  0.000244 -0.000183  6 
+xyzaccel average:  0.000183  0.000262 -0.000470
+ypr deviation:   -0.016   -0.007   -0.002   xyzaccel deviation:  0.000549  0.000000 -0.000916  6 
+xyzaccel average:  0.000238  0.000232 -0.000537
+ypr deviation:   -0.016   -0.007   -0.002   xyzaccel deviation:  0.000244  0.000183 -0.000549  6 
+xyzaccel average:  0.000220  0.000256 -0.000488
+ypr deviation:   -0.017   -0.000    0.000   xyzaccel deviation:  0.000488  0.000610 -0.000916  6 
+xyzaccel average:  0.000256  0.000293 -0.000507
+ypr deviation:   -0.018   -0.000    0.000   xyzaccel deviation: -0.000122  0.000305 -0.000122  7 
+xyzaccel average:  0.000232  0.000305 -0.000507
+ypr deviation:   -0.018   -0.000    0.000   xyzaccel deviation:  0.000122  0.000061 -0.000732  7 
+xyzaccel average:  0.000256  0.000305 -0.000525
+ypr deviation:   -0.019   -0.000    0.000   xyzaccel deviation:  0.000183  0.000183 -0.000122  7 
+xyzaccel average:  0.000275  0.000293 -0.000494
+ypr deviation:   -0.020   -0.000    0.000   xyzaccel deviation:  0.000793  0.000549 -0.000183  7 
+xyzaccel average:  0.000323  0.000287 -0.000470
+ypr deviation:   -0.021   -0.009    0.005   xyzaccel deviation:  0.000671  0.000549  0.000183  7 
+xyzaccel average:  0.000330  0.000317 -0.000403
+ypr deviation:   -0.021   -0.009    0.005   xyzaccel deviation: -0.000244  0.000671 -0.000305  7 
+xyzaccel average:  0.000287  0.000336 -0.000385
+ypr deviation:   -0.011   -0.009    0.005   xyzaccel deviation:  0.000610  0.000305 -0.000366  7 
+xyzaccel average:  0.000330  0.000342 -0.000403
+ypr deviation:   -0.011   -0.002    0.007   xyzaccel deviation:  0.000549  0.000549 -0.000671  8 
+xyzaccel average:  0.000330  0.000397 -0.000378
+ypr deviation:   -0.012   -0.002    0.007   xyzaccel deviation:  0.000244  0.000244 -0.000671  8 
+xyzaccel average:  0.000330  0.000403 -0.000391
+ypr deviation:   -0.013   -0.002    0.007   xyzaccel deviation:  0.000488  0.000061 -0.000061  8 
+xyzaccel average:  0.000330  0.000348 -0.000305
+ypr deviation:   -0.014   -0.002    0.007   xyzaccel deviation:  0.000488  0.000061  0.000488  8 
+xyzaccel average:  0.000391  0.000323 -0.000244
+ypr deviation:   -0.014   -0.002    0.007   xyzaccel deviation:  0.000427  0.000183  0.000183  8 
+xyzaccel average:  0.000421  0.000336 -0.000153
+ypr deviation:   -0.015   -0.002    0.007   xyzaccel deviation:  0.000061  0.000122 -0.000305  8 
+xyzaccel average:  0.000409  0.000330 -0.000171
+ypr deviation:   -0.016   -0.007   -0.002   xyzaccel deviation:  0.000122 -0.000061 -0.000183  8 
+xyzaccel average:  0.000342  0.000269 -0.000171
+ypr deviation:   -0.017   -0.007   -0.002   xyzaccel deviation:  0.000488  0.000122 -0.000183  9 
+xyzaccel average:  0.000323  0.000226 -0.000208
+ypr deviation:   -0.012   -0.007   -0.002   xyzaccel deviation:  0.000244  0.000244  0.000427  9 
+xyzaccel average:  0.000372  0.000183 -0.000134
+ypr deviation:   -0.012   -0.007   -0.002   xyzaccel deviation:  0.000610  0.000000 -0.000916  9 
+xyzaccel average:  0.000372  0.000153 -0.000189
+ypr deviation:   -0.013    0.000    0.000   xyzaccel deviation:  0.000488  0.000183 -0.000366  9 
+xyzaccel average:  0.000366  0.000116 -0.000159
+ypr deviation:   -0.014    0.000    0.000   xyzaccel deviation:  0.000061  0.000366 -0.000671  9 
+xyzaccel average:  0.000348  0.000128 -0.000159
+ypr deviation:   -0.014    0.007    0.003   xyzaccel deviation:  0.000732  0.000061 -0.000671  9 
+xyzaccel average:  0.000372  0.000128 -0.000220
+ypr deviation:   -0.015    0.007    0.003   xyzaccel deviation:  0.000122  0.000000 -0.000854  10 
+xyzaccel average:  0.000336  0.000122 -0.000354
+ypr deviation:   -0.016    0.000    0.000   xyzaccel deviation:  0.000000  0.000671 -0.000793  10 
+xyzaccel average:  0.000293  0.000171 -0.000452
+ypr deviation:   -0.017    0.007    0.003   xyzaccel deviation:  0.000427  0.000183  0.000305  10 
+xyzaccel average:  0.000330  0.000177 -0.000391
+ypr deviation:   -0.017    0.007    0.003   xyzaccel deviation:  0.000305  0.000244 -0.000610  10 
+xyzaccel average:  0.000348  0.000208 -0.000433
+ypr deviation:   -0.018    0.007    0.003   xyzaccel deviation:  0.000610  0.000061 -0.000244  10 
+xyzaccel average:  0.000360  0.000201 -0.000439
+ypr deviation:   -0.019    0.007    0.003   xyzaccel deviation:  0.000122  0.000427 -0.000732  10 
+xyzaccel average:  0.000348  0.000220 -0.000555
+ypr deviation:   -0.020    0.007    0.003   xyzaccel deviation:  0.000732  0.000305 -0.000366  10 
+xyzaccel average:  0.000360  0.000250 -0.000500
+ypr deviation:   -0.020    0.000    0.000   xyzaccel deviation:  0.000488  0.000183 -0.000305  11 
+xyzaccel average:  0.000360  0.000250 -0.000494
+ypr deviation:   -0.021    0.000    0.000   xyzaccel deviation:  0.000549  0.000244 -0.000244  11 
+xyzaccel average:  0.000409  0.000238 -0.000452
+ypr deviation:   -0.022    0.007    0.003   xyzaccel deviation:  0.000000 -0.000122 -0.000244  11 
+xyzaccel average:  0.000336  0.000220 -0.000409
+ypr deviation:   -0.022    0.007    0.003   xyzaccel deviation:  0.000183  0.000488 -0.000366  11 
+xyzaccel average:  0.000342  0.000269 -0.000360
+ypr deviation:   -0.023    0.000    0.000   xyzaccel deviation:  0.000305 -0.000183 -0.000244  11 
+xyzaccel average:  0.000372  0.000183 -0.000305
+ypr deviation:   -0.024    0.000    0.000   xyzaccel deviation:  0.000305  0.000000 -0.000183  11 
+xyzaccel average:  0.000360  0.000165 -0.000354
+ypr deviation:   -0.025    0.000    0.000   xyzaccel deviation:  0.000305  0.000244 -0.001160  11 
+xyzaccel average:  0.000360  0.000165 -0.000409
+ypr deviation:   -0.025    0.000    0.000   xyzaccel deviation:  0.000305  0.000061 -0.000061  12 
+xyzaccel average:  0.000330  0.000165 -0.000391
+ypr deviation:   -0.026    0.000    0.000   xyzaccel deviation:  0.000061  0.000122  0.000000  12 
+xyzaccel average:  0.000323  0.000134 -0.000317
+ypr deviation:   -0.027   -0.007   -0.002   xyzaccel deviation: -0.000305  0.000000 -0.000366  12 
+xyzaccel average:  0.000220  0.000104 -0.000317
+ypr deviation:   -0.028    0.000    0.000   xyzaccel deviation:  0.000671  0.000488 -0.000671  12 
+xyzaccel average:  0.000238  0.000134 -0.000354
+ypr deviation:   -0.028   -0.007   -0.002   xyzaccel deviation:  0.000854  0.000366 -0.000793  12 
+xyzaccel average:  0.000269  0.000146 -0.000409
+ypr deviation:   -0.023   -0.009    0.005   xyzaccel deviation:  0.000122  0.000244  0.000183  12 
+xyzaccel average:  0.000281  0.000183 -0.000366
+ypr deviation:   -0.024   -0.009    0.005   xyzaccel deviation:  0.000122  0.000427  0.000305  13 
+xyzaccel average:  0.000275  0.000177 -0.000299
+ypr deviation:   -0.025   -0.009    0.005   xyzaccel deviation:  0.000122 -0.000305 -0.000427  13 
+xyzaccel average:  0.000256  0.000165 -0.000317
+ypr deviation:   -0.026   -0.002    0.007   xyzaccel deviation:  0.000427  0.000427 -0.000488  13 
+xyzaccel average:  0.000269  0.000208 -0.000348
+ypr deviation:   -0.026   -0.002    0.007   xyzaccel deviation:  0.000427  0.000244 -0.000244  13 
+xyzaccel average:  0.000281  0.000208 -0.000256
+ypr deviation:   -0.027   -0.002    0.007   xyzaccel deviation:  0.000122  0.000244 -0.000793  13 
+xyzaccel average:  0.000262  0.000226 -0.000330
+ypr deviation:   -0.016   -0.009    0.005   xyzaccel deviation:  0.000000  0.000244 -0.000366  13 
+xyzaccel average:  0.000256  0.000238 -0.000366
+ypr deviation:   -0.017   -0.009    0.005   xyzaccel deviation:  0.000427 -0.000366 -0.000183  13 
+xyzaccel average:  0.000330  0.000201 -0.000348
+ypr deviation:   -0.018   -0.002    0.007   xyzaccel deviation: -0.000183  0.000122  0.000000  14 
+xyzaccel average:  0.000244  0.000165 -0.000281
+ypr deviation:   -0.013    0.000    0.001   xyzaccel deviation:  0.000366 -0.000061 -0.000122  14 
+xyzaccel average:  0.000195  0.000122 -0.000214
+ypr deviation:   -0.019   -0.007   -0.001   xyzaccel deviation:  0.000732  0.000244  0.000061  14 
+xyzaccel average:  0.000256  0.000122 -0.000226
+ypr deviation:   -0.014    0.000    0.001   xyzaccel deviation:  0.000366  0.000488  0.000061  14 
+xyzaccel average:  0.000281  0.000128 -0.000250
+ypr deviation:   -0.015   -0.009    0.006   xyzaccel deviation:  0.000244 -0.000183 -0.000427  14 
+xyzaccel average:  0.000293  0.000140 -0.000250
+ypr deviation:   -0.016   -0.007   -0.001   xyzaccel deviation:  0.000061  0.000244 -0.000854  14 
+xyzaccel average:  0.000256  0.000122 -0.000287
+ypr deviation:   -0.017   -0.007   -0.001   xyzaccel deviation:  0.000366 -0.000183  0.000244  14 
+xyzaccel average:  0.000250  0.000079 -0.000238
+ypr deviation:   -0.017   -0.007   -0.001   xyzaccel deviation:  0.000488  0.000244 -0.000183  15 
+xyzaccel average:  0.000287  0.000079 -0.000177
+ypr deviation:   -0.018   -0.007   -0.001   xyzaccel deviation:  0.000488  0.000244 -0.000610  15 
+xyzaccel average:  0.000336  0.000079 -0.000201
+ypr deviation:   -0.019   -0.005   -0.008   xyzaccel deviation:  0.000427  0.000000 -0.000427  15 
+xyzaccel average:  0.000336  0.000116 -0.000226
+ypr deviation:   -0.020   -0.011   -0.010   xyzaccel deviation: -0.000122  0.000000  0.000854  15 
+xyzaccel average:  0.000342  0.000104 -0.000140
+ypr deviation:   -0.020   -0.011   -0.010   xyzaccel deviation:  0.000366 -0.000061  0.000000  15 
+xyzaccel average:  0.000342  0.000104 -0.000128
+ypr deviation:   -0.021   -0.005   -0.008   xyzaccel deviation:  0.000488  0.000244 -0.000549  15 
+xyzaccel average:  0.000317  0.000104 -0.000189
+ypr deviation:   -0.022   -0.005   -0.008   xyzaccel deviation:  0.000000  0.000305 -0.000122  16 
+xyzaccel average:  0.000281  0.000085 -0.000208
+ypr deviation:   -0.022   -0.007   -0.001   xyzaccel deviation:  0.000427  0.000610 -0.000061  16 
+xyzaccel average:  0.000299  0.000165 -0.000171
+ypr deviation:   -0.023   -0.007   -0.001   xyzaccel deviation:  0.000427 -0.000122 -0.000122  16 
+xyzaccel average:  0.000336  0.000128 -0.000098
+ypr deviation:   -0.024   -0.007   -0.001   xyzaccel deviation:  0.000793  0.000366 -0.000244  16 
+xyzaccel average:  0.000378  0.000183 -0.000146
+ypr deviation:   -0.019    0.000    0.001   xyzaccel deviation:  0.000427  0.000488  0.000000  16 
+xyzaccel average:  0.000372  0.000208 -0.000128
+ypr deviation:   -0.020    0.000    0.001   xyzaccel deviation:  0.000122  0.000549 -0.000244  16 
+xyzaccel average:  0.000336  0.000238 -0.000092
+ypr deviation:   -0.020    0.000    0.001   xyzaccel deviation:  0.000305 -0.000061  0.000244  16 
+xyzaccel average:  0.000323  0.000232 -0.000024
+ypr deviation:   -0.021    0.000    0.001   xyzaccel deviation:  0.000610 -0.000061  0.000061  17 
+xyzaccel average:  0.000397  0.000226 -0.000104
+ypr deviation:   -0.022    0.000    0.001   xyzaccel deviation:  0.000366  0.000244 -0.000671  17 
+xyzaccel average:  0.000397  0.000256 -0.000171
+ypr deviation:   -0.023    0.000    0.001   xyzaccel deviation:  0.000427  0.000305  0.000000  17 
+xyzaccel average:  0.000391  0.000262 -0.000116
+ypr deviation:   -0.023    0.000    0.001   xyzaccel deviation:  0.000732  0.000183 -0.000244  17 
+xyzaccel average:  0.000464  0.000250 -0.000128
+ypr deviation:   -0.024    0.007    0.003   xyzaccel deviation:  0.000122  0.000305 -0.000549  17 
+xyzaccel average:  0.000433  0.000220 -0.000177
+ypr deviation:   -0.025   -0.002    0.008   xyzaccel deviation:  0.000000  0.000183  0.000061  17 
+xyzaccel average:  0.000391  0.000250 -0.000159
+ypr deviation:   -0.026   -0.002    0.008   xyzaccel deviation:  0.000610 -0.000244 -0.000244  17 
+xyzaccel average:  0.000372  0.000189 -0.000159
+ypr deviation:   -0.026   -0.002    0.008   xyzaccel deviation:  0.000183  0.000244 -0.000427  18 
+xyzaccel average:  0.000348  0.000165 -0.000201
+ypr deviation:   -0.027    0.005    0.010   xyzaccel deviation:  0.000183  0.000610 -0.000488  18 
+xyzaccel average:  0.000354  0.000171 -0.000226
+ypr deviation:   -0.028   -0.002    0.008   xyzaccel deviation:  0.000366  0.000183  0.000122  18 
+xyzaccel average:  0.000360  0.000195 -0.000238
+ypr deviation:   -0.028    0.005    0.010   xyzaccel deviation:  0.000488  0.000061 -0.000549  18 
+xyzaccel average:  0.000348  0.000208 -0.000299
+ypr deviation:   -0.029    0.003    0.016   xyzaccel deviation:  0.000488  0.000061 -0.000549  18 
+xyzaccel average:  0.000360  0.000189 -0.000287
+ypr deviation:   -0.030   -0.004    0.014   xyzaccel deviation:  0.000244  0.000183 -0.000366  18 
+xyzaccel average:  0.000342  0.000177 -0.000323
+ypr deviation:   -0.031    0.003    0.016   xyzaccel deviation:  0.000305 -0.000122 -0.000122  19 
+xyzaccel average:  0.000299  0.000146 -0.000311
+ypr deviation:   -0.031   -0.002    0.008   xyzaccel deviation:  0.000549 -0.000122 -0.000488  19 
+xyzaccel average:  0.000342  0.000104 -0.000305
+ypr deviation:   -0.032   -0.009    0.006   xyzaccel deviation:  0.000366  0.000305 -0.000610  19 
+xyzaccel average:  0.000378  0.000116 -0.000372
+ypr deviation:   -0.033    0.000    0.001   xyzaccel deviation:  0.000610  0.000000 -0.001038  19 
+xyzaccel average:  0.000378  0.000140 -0.000452
+ypr deviation:   -0.033    0.000    0.001   xyzaccel deviation:  0.000061  0.000244 -0.000244  19 
+xyzaccel average:  0.000366  0.000140 -0.000433
+ypr deviation:   -0.034   -0.002    0.008   xyzaccel deviation: -0.000244  0.000244 -0.000488  19 
+xyzaccel average:  0.000323  0.000104 -0.000433
+ypr deviation:   -0.035   -0.002    0.008   xyzaccel deviation:  0.000122  0.000366  0.000488  19 
+xyzaccel average:  0.000299  0.000122 -0.000397
+ypr deviation:   -0.036   -0.004    0.014   xyzaccel deviation: -0.000244  0.000916 -0.000488  20 
+xyzaccel average:  0.000226  0.000208 -0.000391
+ypr deviation:   -0.036   -0.004    0.014   xyzaccel deviation:  0.000122  0.000427  0.000000  20 
+xyzaccel average:  0.000189  0.000244 -0.000336
+ypr deviation:   -0.037    0.005    0.010   xyzaccel deviation:  0.000610  0.000183 -0.001038  20 
+xyzaccel average:  0.000226  0.000244 -0.000403
+ypr deviation:   -0.038    0.003    0.016   xyzaccel deviation:  0.000305 -0.000122 -0.000244  20 
+xyzaccel average:  0.000226  0.000244 -0.000415
+ypr deviation:   -0.039   -0.004    0.014   xyzaccel deviation:  0.000366  0.000854 -0.000122  20 
+xyzaccel average:  0.000208  0.000342 -0.000378
+ypr deviation:   -0.039    0.003    0.016   xyzaccel deviation:  0.000732  0.000244  0.000244  20 
+xyzaccel average:  0.000244  0.000336 -0.000293
+ypr deviation:   -0.040    0.003    0.016   xyzaccel deviation:  0.001099  0.000610 -0.000854  20 
+xyzaccel average:  0.000293  0.000397 -0.000275
+ypr deviation:   -0.041    0.009    0.018   xyzaccel deviation:  0.001099 -0.000305 -0.000488  21 
+xyzaccel average:  0.000397  0.000342 -0.000299
+ypr deviation:   -0.041    0.005    0.010   xyzaccel deviation:  0.000305 -0.000183 -0.000916  21 
+xyzaccel average:  0.000452  0.000299 -0.000342
+ypr deviation:   -0.042    0.005    0.010   xyzaccel deviation:  0.000366  0.000610 -0.001221  21 
+xyzaccel average:  0.000476  0.000323 -0.000513
+ypr deviation:   -0.037    0.005    0.010   xyzaccel deviation:  0.000000  0.000244 -0.001282  21 
+xyzaccel average:  0.000500  0.000256 -0.000592
+ypr deviation:   -0.032    0.005    0.010   xyzaccel deviation:  0.000305 -0.000183 -0.000916  21 
+xyzaccel average:  0.000519  0.000195 -0.000684
+ypr deviation:   -0.033    0.012    0.012   xyzaccel deviation:  0.000916  0.000366 -0.000061  21 
+xyzaccel average:  0.000549  0.000214 -0.000586
+ypr deviation:   -0.034    0.012    0.012   xyzaccel deviation:  0.000061  0.000427  0.000183  22 
+xyzaccel average:  0.000525  0.000269 -0.000543
+ypr deviation:   -0.034    0.003    0.017   xyzaccel deviation: -0.000122  0.000427 -0.000549  22 
+xyzaccel average:  0.000476  0.000226 -0.000586
+ypr deviation:   -0.035    0.003    0.017   xyzaccel deviation:  0.000549 -0.000244 -0.000122  22 
+xyzaccel average:  0.000458  0.000177 -0.000623
+ypr deviation:   -0.030    0.005    0.010   xyzaccel deviation:  0.000854  0.000549 -0.000671  22 
+xyzaccel average:  0.000433  0.000171 -0.000604
+ypr deviation:   -0.031    0.012    0.012   xyzaccel deviation:  0.000977 -0.000244 -0.000854  22 
+xyzaccel average:  0.000421  0.000177 -0.000641
+ypr deviation:   -0.032    0.005    0.010   xyzaccel deviation:  0.000122 -0.000183 -0.000244  22 
+xyzaccel average:  0.000403  0.000177 -0.000574
+ypr deviation:   -0.032    0.005    0.010   xyzaccel deviation:  0.000549  0.000244 -0.000488  22 
+xyzaccel average:  0.000421  0.000140 -0.000500
+ypr deviation:   -0.033    0.005    0.010   xyzaccel deviation:  0.000122  0.000183 -0.000183  23 
+xyzaccel average:  0.000433  0.000134 -0.000391
+ypr deviation:   -0.039   -0.002    0.008   xyzaccel deviation:  0.000061  0.000183 -0.000427  23 
+xyzaccel average:  0.000409  0.000171 -0.000342
+ypr deviation:   -0.040   -0.002    0.008   xyzaccel deviation:  0.000122 -0.000122 -0.000244  23 
+xyzaccel average:  0.000330  0.000122 -0.000360
+ypr deviation:   -0.041   -0.002    0.008   xyzaccel deviation:  0.000610  0.000977 -0.000061  23 
+xyzaccel average:  0.000385  0.000177 -0.000385
+ypr deviation:   -0.036   -0.002    0.008   xyzaccel deviation: -0.000122  0.000549  0.000000  23 
+xyzaccel average:  0.000385  0.000189 -0.000330
+ypr deviation:   -0.037   -0.011    0.013   xyzaccel deviation:  0.000427  0.000183  0.000610  23 
+xyzaccel average:  0.000372  0.000232 -0.000256
+ypr deviation:   -0.038   -0.011    0.013   xyzaccel deviation:  0.000427  0.000122 -0.000793  23 
+xyzaccel average:  0.000330  0.000189 -0.000269
+ypr deviation:   -0.038   -0.009    0.006   xyzaccel deviation:  0.000916  0.000000  0.000000  24 
+xyzaccel average:  0.000323  0.000214 -0.000183
+ypr deviation:   -0.039   -0.009    0.006   xyzaccel deviation:  0.000671  0.000488 -0.000305  24 
+xyzaccel average:  0.000378  0.000281 -0.000189
+ypr deviation:   -0.040   -0.002    0.008   xyzaccel deviation:  0.000610  0.000061  0.000305  24 
+xyzaccel average:  0.000385  0.000262 -0.000110
+ypr deviation:   -0.040   -0.002    0.008   xyzaccel deviation:  0.001038  0.000122 -0.000244  24 
+xyzaccel average:  0.000476  0.000256 -0.000116
+ypr deviation:   -0.041   -0.002    0.008   xyzaccel deviation:  0.000122  0.000549 -0.000854  24 
+xyzaccel average:  0.000482  0.000293 -0.000159
+ypr deviation:   -0.042    0.000    0.001   xyzaccel deviation:  0.000305  0.000061 -0.000122  24 
+xyzaccel average:  0.000500  0.000311 -0.000146
+ypr deviation:   -0.042    0.000    0.001   xyzaccel deviation:  0.000610  0.000610 -0.000305  25 
+xyzaccel average:  0.000500  0.000275 -0.000171
+ypr deviation:   -0.043    0.000    0.001   xyzaccel deviation:  0.001099  0.001038  0.000183  25 
+xyzaccel average:  0.000623  0.000323 -0.000153
+ypr deviation:   -0.044    0.000    0.001   xyzaccel deviation:  0.000854  0.000305  0.000427  25 
+xyzaccel average:  0.000665  0.000336 -0.000171
+ypr deviation:   -0.045    0.000    0.001   xyzaccel deviation:  0.000977  0.000000  0.000305  25 
+xyzaccel average:  0.000720  0.000323 -0.000061
+ypr deviation:   -0.040    0.000    0.001   xyzaccel deviation:  0.000488  0.000549 -0.000427  25 
+xyzaccel average:  0.000677  0.000378 -0.000104
+ypr deviation:   -0.046    0.000    0.001   xyzaccel deviation:  0.000122  0.000366 -0.000610  25 
+xyzaccel average:  0.000623  0.000366 -0.000134
+ypr deviation:   -0.041    0.000    0.001   xyzaccel deviation: -0.000061  0.000854 -0.000488  25 
+xyzaccel average:  0.000555  0.000446 -0.000214
+ypr deviation:   -0.042   -0.007   -0.001   xyzaccel deviation: -0.000061  0.000244 -0.000916  26 
+xyzaccel average:  0.000446  0.000458 -0.000281
+ypr deviation:   -0.043    0.002   -0.005   xyzaccel deviation:  0.000488  0.000305  0.000061  26 
+xyzaccel average:  0.000482  0.000433 -0.000189
+ypr deviation:   -0.043    0.002   -0.005   xyzaccel deviation:  0.000183  0.000183 -0.000732  26 
+xyzaccel average:  0.000470  0.000446 -0.000250
+ypr deviation:   -0.044    0.000    0.001   xyzaccel deviation:  0.000610  0.000610 -0.000610  26 
+xyzaccel average:  0.000470  0.000446 -0.000281
+ypr deviation:   -0.045    0.000    0.001   xyzaccel deviation:  0.000610 -0.000061  0.000427  26 
+xyzaccel average:  0.000421  0.000336 -0.000256
+ypr deviation:   -0.046    0.000    0.001   xyzaccel deviation:  0.000244  0.000244 -0.000183  26 
+xyzaccel average:  0.000360  0.000330 -0.000317
+ypr deviation:   -0.046    0.000    0.001   xyzaccel deviation:  0.000427  0.000244 -0.000122  26 
+xyzaccel average:  0.000305  0.000354 -0.000360
+ypr deviation:   -0.047   -0.007   -0.001   xyzaccel deviation:  0.000488  0.000244 -0.000122  27 
+xyzaccel average:  0.000305  0.000323 -0.000330
+ypr deviation:   -0.048   -0.007   -0.001   xyzaccel deviation:  0.000244  0.000488 -0.000854  27 
+xyzaccel average:  0.000317  0.000336 -0.000354
+ypr deviation:   -0.049   -0.009    0.006   xyzaccel deviation:  0.000244  0.000610 -0.000122  27 
+xyzaccel average:  0.000348  0.000311 -0.000317
+ypr deviation:   -0.049   -0.007   -0.001   xyzaccel deviation:  0.000366  0.000183 -0.000549  27 
+xyzaccel average:  0.000391  0.000305 -0.000281
+ypr deviation:   -0.050    0.000    0.001   xyzaccel deviation:  0.000610  0.000183 -0.000366  27 
+xyzaccel average:  0.000403  0.000293 -0.000323
+ypr deviation:   -0.051    0.000    0.001   xyzaccel deviation:  0.000061  0.000732 -0.000366  27 
+xyzaccel average:  0.000391  0.000348 -0.000287
+ypr deviation:   -0.051    0.000    0.001   xyzaccel deviation:  0.000610  0.000427 -0.000305  28 
+xyzaccel average:  0.000391  0.000330 -0.000256
+ypr deviation:   -0.047   -0.002    0.008   xyzaccel deviation:  0.000366  0.000305 -0.000183  28 
+xyzaccel average:  0.000366  0.000366 -0.000317
+ypr deviation:   -0.047   -0.007   -0.001   xyzaccel deviation:  0.000366 -0.000061 -0.000122  28 
+xyzaccel average:  0.000378  0.000336 -0.000311
+ypr deviation:   -0.048   -0.007   -0.001   xyzaccel deviation:  0.000549  0.000061 -0.000305  28 
+xyzaccel average:  0.000391  0.000317 -0.000330
+ypr deviation:   -0.049   -0.007   -0.001   xyzaccel deviation:  0.000305  0.000000 -0.000732  28 
+xyzaccel average:  0.000372  0.000293 -0.000391
+ypr deviation:   -0.049   -0.007   -0.001   xyzaccel deviation:  0.000305  0.000122 -0.000488  28 
+xyzaccel average:  0.000378  0.000256 -0.000354
+ypr deviation:   -0.056   -0.007   -0.001   xyzaccel deviation:  0.000305 -0.000244  0.000000  28 
+xyzaccel average:  0.000385  0.000171 -0.000342
+ypr deviation:   -0.056   -0.007   -0.001   xyzaccel deviation:  0.000366  0.000366 -0.000549  29 
+xyzaccel average:  0.000385  0.000189 -0.000342
+ypr deviation:   -0.052   -0.007   -0.001   xyzaccel deviation:  0.000732 -0.000244 -0.000061  29 
+xyzaccel average:  0.000397  0.000146 -0.000311
+ypr deviation:   -0.052   -0.007   -0.001   xyzaccel deviation:  0.000488  0.000488 -0.000366  29 
+xyzaccel average:  0.000439  0.000122 -0.000311
+ypr deviation:   -0.053   -0.007   -0.001   xyzaccel deviation:  0.000183  0.000549 -0.000732  29 
+xyzaccel average:  0.000397  0.000134 -0.000354
+ypr deviation:   -0.054   -0.007   -0.001   xyzaccel deviation:  0.000000  0.000183 -0.000183  29 
+xyzaccel average:  0.000360  0.000122 -0.000354
+ypr deviation:   -0.054   -0.007   -0.001   xyzaccel deviation:  0.000305 -0.000366 -0.000610  29 
+xyzaccel average:  0.000354  0.000092 -0.000403
+ypr deviation:   -0.055   -0.004   -0.007   xyzaccel deviation:  0.000732  0.000305 -0.000732  29 
+xyzaccel average:  0.000372  0.000116 -0.000446
+ypr deviation:   -0.061   -0.004   -0.007   xyzaccel deviation:  0.000610  0.000122  0.000183  30 
+xyzaccel average:  0.000403  0.000128 -0.000354
+ypr deviation:   -0.057    0.002   -0.005   xyzaccel deviation:  0.000122  0.000549 -0.000061  30 
+xyzaccel average:  0.000385  0.000171 -0.000311
+ypr deviation:   -0.057    0.002   -0.005   xyzaccel deviation:  0.000183  0.000793 -0.000549  30 
+xyzaccel average:  0.000372  0.000275 -0.000366
+ypr deviation:   -0.058    0.002   -0.005   xyzaccel deviation: -0.000122  0.000366  0.000427  30 
+xyzaccel average:  0.000323  0.000275 -0.000269
+ypr deviation:   -0.059   -0.004   -0.007   xyzaccel deviation:  0.000488  0.000366 -0.000610  30 
+xyzaccel average:  0.000299  0.000336 -0.000323
+ypr deviation:   -0.059    0.002   -0.005   xyzaccel deviation:  0.000366  0.000732  0.000000  30 
+xyzaccel average:  0.000287  0.000360 -0.000287
+ypr deviation:   -0.060   -0.007   -0.001   xyzaccel deviation:  0.000305  0.000488 -0.000183  31 
+xyzaccel average:  0.000299  0.000354 -0.000232
+ypr deviation:   -0.055   -0.004   -0.007   xyzaccel deviation:  0.000671  0.000305  0.000244  31 
+xyzaccel average:  0.000366  0.000366 -0.000189
+ypr deviation:   -0.056    0.002   -0.005   xyzaccel deviation:  0.000488  0.000366  0.000488  31 
+xyzaccel average:  0.000385  0.000439 -0.000079
+ypr deviation:   -0.051    0.000    0.002   xyzaccel deviation:  0.000183  0.000305 -0.000366  31 
+xyzaccel average:  0.000330  0.000439 -0.000043
+ypr deviation:   -0.052    0.002   -0.005   xyzaccel deviation:  0.000061  0.000244  0.000305  31 
+xyzaccel average:  0.000275  0.000452 -0.000031
+ypr deviation:   -0.052    0.002   -0.005   xyzaccel deviation:  0.000488  0.000305 -0.000732  31 
+xyzaccel average:  0.000311  0.000427 -0.000098
+ypr deviation:   -0.053    0.000    0.002   xyzaccel deviation:  0.000305  0.000671  0.000366  31 
+xyzaccel average:  0.000323  0.000415 -0.000006
+ypr deviation:   -0.054    0.000    0.002   xyzaccel deviation:  0.000244  0.000305 -0.000305  32 
+xyzaccel average:  0.000360  0.000409 -0.000079
+ypr deviation:   -0.055   -0.006   -0.000   xyzaccel deviation:  0.000061  0.000366 -0.000366  32 
+xyzaccel average:  0.000317  0.000409 -0.000055
+ypr deviation:   -0.055    0.000    0.002   xyzaccel deviation:  0.000732  0.000183 -0.000427  32 
+xyzaccel average:  0.000354  0.000354 -0.000098
+ypr deviation:   -0.056   -0.002    0.008   xyzaccel deviation:  0.000610  0.000366 -0.000061  32 
+xyzaccel average:  0.000385  0.000342 -0.000085
+ypr deviation:   -0.057    0.000    0.002   xyzaccel deviation:  0.000549  0.000305  0.000061  32 
+xyzaccel average:  0.000372  0.000342 -0.000104
+ypr deviation:   -0.057    0.000    0.002   xyzaccel deviation:  0.000549  0.000061 -0.000244  32 
+xyzaccel average:  0.000378  0.000311 -0.000177
+ypr deviation:   -0.053   -0.006   -0.000   xyzaccel deviation:  0.000244  0.000061  0.000122  32 
+xyzaccel average:  0.000385  0.000287 -0.000128
+ypr deviation:   -0.059   -0.004   -0.007   xyzaccel deviation:  0.000244 -0.000122 -0.000732  33 
+xyzaccel average:  0.000403  0.000250 -0.000232
+ypr deviation:   -0.060   -0.006   -0.000   xyzaccel deviation:  0.000244  0.000488 -0.000305  33 
+xyzaccel average:  0.000378  0.000269 -0.000189
+ypr deviation:   -0.055   -0.006   -0.000   xyzaccel deviation:  0.000427  0.000366  0.000000  33 
+xyzaccel average:  0.000391  0.000238 -0.000226
+ypr deviation:   -0.061   -0.006   -0.000   xyzaccel deviation:  0.000549  0.000244  0.000610  33 
+xyzaccel average:  0.000421  0.000232 -0.000134
+ypr deviation:   -0.062   -0.008    0.006   xyzaccel deviation: -0.000183  0.000122 -0.000061  33 
+xyzaccel average:  0.000397  0.000208 -0.000104
+ypr deviation:   -0.057   -0.006   -0.000   xyzaccel deviation:  0.000366  0.000061 -0.000916  33 
+xyzaccel average:  0.000360  0.000195 -0.000153
+ypr deviation:   -0.063   -0.006   -0.000   xyzaccel deviation:  0.000610  0.000305 -0.000122  34 
+xyzaccel average:  0.000360  0.000189 -0.000159
+ypr deviation:   -0.058   -0.006   -0.000   xyzaccel deviation:  0.000610  0.000549  0.000183  34 
+xyzaccel average:  0.000366  0.000214 -0.000146
+ypr deviation:   -0.059   -0.006   -0.000   xyzaccel deviation:  0.000671  0.000366 -0.000183  34 
+xyzaccel average:  0.000378  0.000244 -0.000140
+ypr deviation:   -0.060   -0.006   -0.000   xyzaccel deviation:  0.000366  0.000305 -0.000488  34 
+xyzaccel average:  0.000391  0.000269 -0.000201
+ypr deviation:   -0.061   -0.006   -0.000   xyzaccel deviation:  0.000610  0.000793 -0.000549  34 
+xyzaccel average:  0.000427  0.000360 -0.000183
+ypr deviation:   -0.061   -0.006   -0.000   xyzaccel deviation:  0.000061  0.000244 -0.000305  34 
+xyzaccel average:  0.000409  0.000336 -0.000183
+ypr deviation:   -0.062    0.000    0.002   xyzaccel deviation:  0.000793  0.000427 -0.000244  34 
+xyzaccel average:  0.000446  0.000342 -0.000208
+ypr deviation:   -0.063    0.000    0.002   xyzaccel deviation: -0.000122  0.000549 -0.000244  35 
+xyzaccel average:  0.000378  0.000372 -0.000293
+ypr deviation:   -0.063    0.000    0.002   xyzaccel deviation:  0.000916  0.000305  0.000671  35 
+xyzaccel average:  0.000488  0.000391 -0.000220
+ypr deviation:   -0.064    0.000    0.002   xyzaccel deviation:  0.000000  0.000244  0.000183  35 
+xyzaccel average:  0.000452  0.000409 -0.000110
+ypr deviation:   -0.065    0.000    0.002   xyzaccel deviation:  0.000488  0.000122 -0.000244  35 
+xyzaccel average:  0.000439  0.000391 -0.000122
+ypr deviation:   -0.066    0.000    0.002   xyzaccel deviation:  0.000916  0.000061 -0.000549  35 
+xyzaccel average:  0.000470  0.000342 -0.000195
+ypr deviation:   -0.066    0.000    0.002   xyzaccel deviation:  0.000427  0.000305 -0.000427  35 
+xyzaccel average:  0.000446  0.000336 -0.000220
+ypr deviation:   -0.067    0.002   -0.005   xyzaccel deviation: -0.000061 -0.000366  0.000061  35 
+xyzaccel average:  0.000403  0.000269 -0.000165
+ypr deviation:   -0.068    0.002   -0.005   xyzaccel deviation:  0.000427  0.000488 -0.000366  36 
+xyzaccel average:  0.000385  0.000238 -0.000146
+ypr deviation:   -0.068    0.002   -0.005   xyzaccel deviation:  0.000122  0.000305 -0.001282  36 
+xyzaccel average:  0.000391  0.000244 -0.000244
+ypr deviation:   -0.069    0.002   -0.005   xyzaccel deviation:  0.000549  0.000549  0.000000  36 
+xyzaccel average:  0.000366  0.000256 -0.000220
+ypr deviation:   -0.070    0.011   -0.010   xyzaccel deviation:  0.000305  0.000122 -0.000366  36 
+xyzaccel average:  0.000409  0.000214 -0.000232
+ypr deviation:   -0.071    0.011   -0.010   xyzaccel deviation:  0.000183  0.000122 -0.000366  36 
+xyzaccel average:  0.000336  0.000195 -0.000336
+ypr deviation:   -0.071    0.011   -0.010   xyzaccel deviation:  0.000366  0.000671 -0.000549  36 
+xyzaccel average:  0.000372  0.000238 -0.000409
+ypr deviation:   -0.072    0.006   -0.018   xyzaccel deviation:  0.000061  0.000793 -0.000122  37 
+xyzaccel average:  0.000330  0.000305 -0.000397
+ypr deviation:   -0.073    0.004   -0.012   xyzaccel deviation:  0.000122  0.000671  0.000061  37 
+xyzaccel average:  0.000250  0.000366 -0.000336
+ypr deviation:   -0.073    0.004   -0.012   xyzaccel deviation:  0.000366  0.000122 -0.001099  37 
+xyzaccel average:  0.000244  0.000348 -0.000403
+ypr deviation:   -0.074    0.002   -0.005   xyzaccel deviation:  0.000732  0.000305 -0.000366  37 
+xyzaccel average:  0.000323  0.000415 -0.000446
+ypr deviation:   -0.075    0.002   -0.005   xyzaccel deviation:  0.000427  0.000305 -0.000671  37 
+xyzaccel average:  0.000323  0.000397 -0.000476
+ypr deviation:   -0.076    0.002   -0.005   xyzaccel deviation:  0.000061  0.000793 -0.000305  37 
+xyzaccel average:  0.000317  0.000446 -0.000378
+ypr deviation:   -0.076    0.002   -0.005   xyzaccel deviation:  0.000305  0.000244 -0.000671  37 
+xyzaccel average:  0.000293  0.000415 -0.000446
+ypr deviation:   -0.077    0.002   -0.005   xyzaccel deviation:  0.000244  0.000427 -0.000610  38 
+xyzaccel average:  0.000287  0.000446 -0.000470
+ypr deviation:   -0.078    0.000    0.002   xyzaccel deviation:  0.000305  0.000366  0.000061  38 
+xyzaccel average:  0.000299  0.000470 -0.000427
+ypr deviation:   -0.084    0.000    0.002   xyzaccel deviation:  0.000488  0.000244  0.000366  38 
+xyzaccel average:  0.000311  0.000427 -0.000336
+ypr deviation:   -0.079    0.000    0.002   xyzaccel deviation:  0.000732  0.000488 -0.000488  38 
+xyzaccel average:  0.000378  0.000397 -0.000372
+ypr deviation:   -0.080    0.002   -0.005   xyzaccel deviation:  0.000000 -0.000244 -0.000488  38 
+xyzaccel average:  0.000366  0.000305 -0.000427
+ypr deviation:   -0.081    0.002   -0.005   xyzaccel deviation:  0.000793  0.000427 -0.000488  38 
+xyzaccel average:  0.000409  0.000336 -0.000366
+ypr deviation:   -0.081    0.002   -0.005   xyzaccel deviation:  0.000916  0.000000  0.000488  38 
+xyzaccel average:  0.000427  0.000305 -0.000281
+ypr deviation:   -0.082    0.004   -0.012   xyzaccel deviation: -0.000183  0.000305 -0.000549  39 
+xyzaccel average:  0.000366  0.000305 -0.000269
+ypr deviation:   -0.083    0.002   -0.005   xyzaccel deviation:  0.000244  0.000549 -0.000366  39 
+xyzaccel average:  0.000385  0.000281 -0.000275
+ypr deviation:   -0.084    0.002   -0.005   xyzaccel deviation:  0.000488  0.000671 -0.000488  39 
+xyzaccel average:  0.000403  0.000323 -0.000256
+ypr deviation:   -0.084    0.004   -0.012   xyzaccel deviation:  0.000916 -0.000122 -0.000977  39 
+xyzaccel average:  0.000470  0.000269 -0.000293
+ypr deviation:   -0.085    0.004   -0.012   xyzaccel deviation:  0.000305  0.000427 -0.000061  39 
+xyzaccel average:  0.000470  0.000275 -0.000305
+ypr deviation:   -0.086    0.004   -0.012   xyzaccel deviation:  0.000671  0.000122 -0.001221  39 
+xyzaccel average:  0.000488  0.000262 -0.000464
+ypr deviation:   -0.086    0.004   -0.012   xyzaccel deviation:  0.000488  0.000244 -0.000488  40 
+xyzaccel average:  0.000464  0.000238 -0.000464
+ypr deviation:   -0.087    0.002   -0.005   xyzaccel deviation:  0.000610  0.000977 -0.000366  40 
+xyzaccel average:  0.000525  0.000360 -0.000452
+ypr deviation:   -0.082    0.002   -0.005   xyzaccel deviation:  0.000488  0.000366 -0.000183  40 
+xyzaccel average:  0.000494  0.000354 -0.000421
+ypr deviation:   -0.083    0.002   -0.005   xyzaccel deviation:  0.000427 -0.000183 -0.000977  40 
+xyzaccel average:  0.000446  0.000336 -0.000568
+ypr deviation:   -0.084   -0.004   -0.007   xyzaccel deviation:  0.000244  0.000122 -0.000549  40 
+xyzaccel average:  0.000488  0.000317 -0.000568
+ypr deviation:   -0.085   -0.004   -0.007   xyzaccel deviation:  0.000366  0.000244 -0.000305  40 
+xyzaccel average:  0.000500  0.000287 -0.000562
+ypr deviation:   -0.085    0.002   -0.005   xyzaccel deviation:  0.000488  0.000671 -0.000122  40 
+xyzaccel average:  0.000500  0.000287 -0.000525
+ypr deviation:   -0.086    0.002   -0.005   xyzaccel deviation:  0.000305 -0.000061  0.000305  41 
+xyzaccel average:  0.000439  0.000293 -0.000397
+ypr deviation:   -0.087    0.000    0.002   xyzaccel deviation:  0.000183  0.000610 -0.000671  41 
+xyzaccel average:  0.000427  0.000311 -0.000458
+ypr deviation:   -0.087    0.000    0.002   xyzaccel deviation:  0.000183  0.000427 -0.000610  41 
+xyzaccel average:  0.000378  0.000342 -0.000397
+ypr deviation:   -0.088    0.007    0.004   xyzaccel deviation:  0.000977  0.000549 -0.001221  41 
+xyzaccel average:  0.000427  0.000372 -0.000470
+ypr deviation:   -0.094    0.002   -0.005   xyzaccel deviation:  0.000000 -0.000183 -0.000183  41 
+xyzaccel average:  0.000366  0.000256 -0.000452
+ypr deviation:   -0.090    0.002   -0.005   xyzaccel deviation:  0.000488  0.000366  0.000732  41 
+xyzaccel average:  0.000366  0.000256 -0.000360
+ypr deviation:   -0.090    0.004   -0.012   xyzaccel deviation:  0.000061  0.000183 -0.000061  41 
+xyzaccel average:  0.000330  0.000293 -0.000269
+ypr deviation:   -0.091    0.011   -0.009   xyzaccel deviation:  0.000854  0.000305 -0.000488  42 
+xyzaccel average:  0.000391  0.000311 -0.000262
+ypr deviation:   -0.092    0.009   -0.003   xyzaccel deviation:  0.000122  0.000610  0.000061  42 
+xyzaccel average:  0.000366  0.000348 -0.000226
+ypr deviation:   -0.092    0.004   -0.012   xyzaccel deviation: -0.000305  0.000244  0.000244  42 
+xyzaccel average:  0.000287  0.000305 -0.000189
+ypr deviation:   -0.087    0.002   -0.005   xyzaccel deviation: -0.000366  0.000427 -0.000854  42 
+xyzaccel average:  0.000220  0.000354 -0.000305
+ypr deviation:   -0.094    0.000    0.002   xyzaccel deviation: -0.000061  0.000488  0.000000  42 
+xyzaccel average:  0.000195  0.000342 -0.000238
+ypr deviation:   -0.095    0.000    0.002   xyzaccel deviation:  0.000183  0.000305 -0.000366  42 
+xyzaccel average:  0.000195  0.000330 -0.000214
+ypr deviation:   -0.084    0.000    0.002   xyzaccel deviation:  0.000793  0.000305 -0.000122  43 
+xyzaccel average:  0.000177  0.000305 -0.000104
+ypr deviation:   -0.085    0.000    0.002   xyzaccel deviation:  0.000183  0.000122 -0.000244  43 
+xyzaccel average:  0.000195  0.000336 -0.000110
+ypr deviation:   -0.086   -0.006   -0.000   xyzaccel deviation:  0.000549  0.000244 -0.000427  43 
+xyzaccel average:  0.000201  0.000323 -0.000226
+ypr deviation:   -0.086    0.000    0.002   xyzaccel deviation:  0.000671  0.000061 -0.000488  43 
+xyzaccel average:  0.000262  0.000311 -0.000269
+ypr deviation:   -0.087    0.000    0.002   xyzaccel deviation:  0.000244  0.000549 -0.000244  43 
+xyzaccel average:  0.000201  0.000336 -0.000244
+ypr deviation:   -0.082   -0.006    0.000   xyzaccel deviation:  0.000000  0.000061 -0.000427  43 
+xyzaccel average:  0.000189  0.000281 -0.000293
+ypr deviation:   -0.083   -0.006    0.000   xyzaccel deviation:  0.000305  0.000244 -0.000610  43 
+xyzaccel average:  0.000250  0.000281 -0.000378
+ypr deviation:   -0.084   -0.006    0.000   xyzaccel deviation:  0.000122  0.000122 -0.000854  44 
+xyzaccel average:  0.000299  0.000250 -0.000378
+ypr deviation:   -0.084   -0.006    0.000   xyzaccel deviation:  0.000122  0.000305 -0.000122  44 
+xyzaccel average:  0.000317  0.000232 -0.000391
+ypr deviation:   -0.085   -0.006    0.000   xyzaccel deviation:  0.000305  0.000122  0.000122  44 
+xyzaccel average:  0.000330  0.000214 -0.000342
+ypr deviation:   -0.086   -0.006    0.000   xyzaccel deviation:  0.000427  0.000549 -0.000854  44 
+xyzaccel average:  0.000293  0.000238 -0.000415
+ypr deviation:   -0.086   -0.006    0.000   xyzaccel deviation:  0.000061  0.000488 -0.000244  44 
+xyzaccel average:  0.000281  0.000275 -0.000415
+ypr deviation:   -0.087   -0.006    0.000   xyzaccel deviation:  0.000854  0.000061 -0.000183  44 
+xyzaccel average:  0.000311  0.000256 -0.000391
+ypr deviation:   -0.082    0.000    0.002   xyzaccel deviation:  0.000610  0.000061 -0.000488  44 
+xyzaccel average:  0.000305  0.000256 -0.000391
+ypr deviation:   -0.083    0.000    0.002   xyzaccel deviation:  0.000305  0.000671  0.000366  45 
+xyzaccel average:  0.000311  0.000269 -0.000330
+ypr deviation:   -0.084   -0.002    0.009   xyzaccel deviation:  0.000427  0.000732 -0.000977  45 
+xyzaccel average:  0.000354  0.000336 -0.000385
+ypr deviation:   -0.084   -0.002    0.009   xyzaccel deviation:  0.000366  0.000305 -0.000305  45 
+xyzaccel average:  0.000360  0.000342 -0.000354
+ypr deviation:   -0.085   -0.002    0.009   xyzaccel deviation:  0.000305  0.000183 -0.000244  45 
+xyzaccel average:  0.000378  0.000348 -0.000293
+ypr deviation:   -0.086    0.000    0.002   xyzaccel deviation:  0.000183  0.000000 -0.000427  45 
+xyzaccel average:  0.000385  0.000317 -0.000323
+ypr deviation:   -0.087   -0.002    0.009   xyzaccel deviation:  0.000122  0.000549 -0.001160  45 
+xyzaccel average:  0.000366  0.000360 -0.000452
+ypr deviation:   -0.087   -0.006    0.000   xyzaccel deviation:  0.000427  0.000427  0.000000  46 
+xyzaccel average:  0.000366  0.000348 -0.000366
+ypr deviation:   -0.088   -0.008    0.007   xyzaccel deviation:  0.000305  0.000671 -0.000244  46 
+xyzaccel average:  0.000391  0.000366 -0.000366
+ypr deviation:   -0.089   -0.008    0.007   xyzaccel deviation:  0.000061  0.000366 -0.000671  46 
+xyzaccel average:  0.000311  0.000397 -0.000415
+ypr deviation:   -0.090   -0.008    0.007   xyzaccel deviation:  0.000488  0.000244  0.000000  46 
+xyzaccel average:  0.000299  0.000415 -0.000366
+ypr deviation:   -0.090   -0.015    0.005   xyzaccel deviation:  0.000061  0.000488  0.000000  46 
+xyzaccel average:  0.000275  0.000397 -0.000403
+ypr deviation:   -0.085   -0.013   -0.002   xyzaccel deviation:  0.000183  0.000549 -0.000488  46 
+xyzaccel average:  0.000250  0.000378 -0.000354
+ypr deviation:   -0.080   -0.008    0.007   xyzaccel deviation:  0.000549  0.000793 -0.000732  46 
+xyzaccel average:  0.000269  0.000427 -0.000397
+ypr deviation:   -0.081   -0.008    0.007   xyzaccel deviation:  0.000610  0.000122 -0.000732  47 
+xyzaccel average:  0.000299  0.000421 -0.000446
+ypr deviation:   -0.082   -0.002    0.009   xyzaccel deviation:  0.000488 -0.000061 -0.000671  47 
+xyzaccel average:  0.000330  0.000415 -0.000470
+ypr deviation:   -0.077    0.000    0.002   xyzaccel deviation:  0.000488  0.000488  0.000427  47 
+xyzaccel average:  0.000366  0.000409 -0.000311
+ypr deviation:   -0.078   -0.008    0.007   xyzaccel deviation:  0.000122 -0.000244 -0.000427  47 
+xyzaccel average:  0.000336  0.000342 -0.000354
+ypr deviation:   -0.078   -0.008    0.007   xyzaccel deviation:  0.000122  0.000305 -0.000793  47 
+xyzaccel average:  0.000317  0.000305 -0.000409
+ypr deviation:   -0.079    0.000    0.002   xyzaccel deviation:  0.000488  0.000000 -0.000549  47 
+xyzaccel average:  0.000360  0.000269 -0.000397
+ypr deviation:   -0.074    0.000    0.003   xyzaccel deviation: -0.000061  0.000305 -0.000305  47 
+xyzaccel average:  0.000305  0.000275 -0.000427
+ypr deviation:   -0.081   -0.002    0.009   xyzaccel deviation:  0.000610  0.000244 -0.000183  48 
+xyzaccel average:  0.000360  0.000250 -0.000446
+ypr deviation:   -0.081    0.005    0.011   xyzaccel deviation:  0.000427  0.000122 -0.000488  48 
+xyzaccel average:  0.000385  0.000208 -0.000446
+ypr deviation:   -0.082    0.005    0.011   xyzaccel deviation:  0.000305  0.000244 -0.000916  48 
+xyzaccel average:  0.000360  0.000153 -0.000464
+ypr deviation:   -0.077    0.000    0.003   xyzaccel deviation:  0.000488  0.000183 -0.000183  48 
+xyzaccel average:  0.000348  0.000159 -0.000409
+ypr deviation:   -0.078    0.007    0.005   xyzaccel deviation:  0.000854  0.000183 -0.000732  48 
+xyzaccel average:  0.000385  0.000183 -0.000415
+ypr deviation:   -0.079    0.007    0.005   xyzaccel deviation: -0.000244  0.000610 -0.000916  48 
+xyzaccel average:  0.000311  0.000195 -0.000549
+ypr deviation:   -0.079    0.000    0.003   xyzaccel deviation:  0.000122  0.000488 -0.000366  49 
+xyzaccel average:  0.000311  0.000269 -0.000543
+ypr deviation:   -0.080    0.000    0.003   xyzaccel deviation:  0.000244 -0.000244 -0.000854  49 
+xyzaccel average:  0.000323  0.000214 -0.000549
+ypr deviation:   -0.075    0.000    0.003   xyzaccel deviation:  0.000732 -0.000183 -0.000244  49 
+xyzaccel average:  0.000348  0.000195 -0.000519
+ypr deviation:   -0.070    0.000    0.003   xyzaccel deviation:  0.000610  0.000671 -0.000488  49 
+xyzaccel average:  0.000415  0.000232 -0.000537
+ypr deviation:   -0.071    0.000    0.003   xyzaccel deviation:  0.000610 -0.000183 -0.000305  49 
+xyzaccel average:  0.000415  0.000189 -0.000549
+ypr deviation:   -0.072    0.002   -0.004   xyzaccel deviation:  0.000244 -0.000061  0.000061  49 
+xyzaccel average:  0.000397  0.000171 -0.000494
+ypr deviation:   -0.078    0.000    0.003   xyzaccel deviation:  0.000305  0.000366 -0.000549  49 
+xyzaccel average:  0.000397  0.000183 -0.000458
+ypr deviation:   -0.079    0.000    0.003   xyzaccel deviation:  0.000305  0.000244  0.000122  50 
+xyzaccel average:  0.000378  0.000189 -0.000427
+ypr deviation:   -0.074    0.000    0.003   xyzaccel deviation: -0.000061  0.000061 -0.001160  50 
+xyzaccel average:  0.000287  0.000177 -0.000470
+ypr deviation:   -0.074    0.002   -0.004   xyzaccel deviation:  0.000427  0.000000 -0.000488  50 
+xyzaccel average:  0.000354  0.000116 -0.000427
+ypr deviation:   -0.075    0.000    0.003   xyzaccel deviation:  0.000183  0.000854 -0.000427  50 
+xyzaccel average:  0.000360  0.000153 -0.000433
