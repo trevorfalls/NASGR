@@ -14,9 +14,13 @@
 #include <ros/network.h>
 #include <string>
 #include <std_msgs/String.h>
+#include <topic_tools/MuxSelect.h>
 #include <sensor_msgs/Joy.h>
 #include <sstream>
 #include "../include/qdude/qnode.hpp"
+#include <image_transport/image_transport.h>
+#include <cv_bridge/cv_bridge.h>
+#include <sensor_msgs/image_encodings.h>
 #include <QDebug>
 
 /*****************************************************************************
@@ -54,11 +58,16 @@ bool QNode::init() {
 		return false;
 	}
 	ros::start(); // explicitly needed since our nodehandle is going out of scope.
-	ros::NodeHandle n;
+    ros::NodeHandle n;
+    ros::NodeHandle in;
 	// Add your ros communications here.
 	chatter_publisher = n.advertise<std_msgs::String>("chatter", 1000);
     cmd_publisher = n.advertise<std_msgs::String>("/gui_cmd", 1000);
+    camToggle_client = n.serviceClient<topic_tools::MuxSelect>("mux_usb_cam/select");
     joy_subscriber = n.subscribe<sensor_msgs::Joy>("joy",10,&QNode::joyCallback,this);
+    image_transport::ImageTransport rt_(in);
+    it_ = &rt_; //you're going to be confused by this, I tried to do something that didn't work and I didn't remove unused variables
+    image_sub_ = it_->subscribe("/displayCam", 1, &QNode::imageCallback, this);
 	start();
 	return true;
 }
@@ -73,11 +82,16 @@ bool QNode::init(const std::string &master_url, const std::string &host_url) {
 		return false;
 	}
 	ros::start(); // explicitly needed since our nodehandle is going out of scope.
-	ros::NodeHandle n;
+    ros::NodeHandle n;
+    ros::NodeHandle in;
 	// Add your ros communications here.
 	chatter_publisher = n.advertise<std_msgs::String>("chatter", 1000);
     cmd_publisher = n.advertise<std_msgs::String>("/gui_cmd", 1000);
+    camToggle_client = n.serviceClient<topic_tools::MuxSelect>("mux_usb_cam/select");
     joy_subscriber = n.subscribe<sensor_msgs::Joy>("joy",10,&QNode::joyCallback,this);
+    image_transport::ImageTransport rt_(in);
+    it_ = &rt_;
+    image_sub_ = it_->subscribe("/displayCam", 1, &QNode::imageCallback, this);
 	start();
 	return true;
 }
@@ -160,6 +174,8 @@ void QNode::magicSlotReleased() {
 }
 
 void QNode::joyCallback(const sensor_msgs::Joy::ConstPtr& joy) {
+    static int camToggle = 0;
+    static int activeCam = 0;
     Q_EMIT buttonAPressed(joy->buttons[0]);
     Q_EMIT buttonBPressed(joy->buttons[1]);
     Q_EMIT buttonXPressed(joy->buttons[2]);
@@ -170,6 +186,63 @@ void QNode::joyCallback(const sensor_msgs::Joy::ConstPtr& joy) {
     Q_EMIT leftControlV(map(joy->axes[1],-1,1,0,100));
     Q_EMIT rightControlH(map(joy->axes[2],1,-1,0,100));
     Q_EMIT rightControlV(map(joy->axes[3],-1,1,0,100));
+    if(joy->buttons[4]) {
+        //image_sub_.shutdown();
+        //image_sub_ = it_->subscribe("/usb_cam1/image_raw", 1, &QNode::imageCallback, this);
+        camToggle = 1;
+    }
+    else if(camToggle){
+        topic_tools::MuxSelect srv;
+        activeCam = (activeCam + 1) % 2;
+        if(activeCam==1) {
+            srv.request.topic = "usb_cam1/image_raw";
+        }
+        else if(activeCam==0) {
+            srv.request.topic = "usb_cam/image_raw";
+        }
+        camToggle_client.call(srv);
+        Q_EMIT Update_Active_Cam(activeCam);
+        camToggle = 0;
+    }
+}
+
+QImage QNode::cvtCvMat2QImage(const cv::Mat & image)
+{
+    QImage qtemp;
+    if(!image.empty() && image.depth() == CV_8U)
+    {
+        const unsigned char * data = image.data;
+        qtemp = QImage(image.cols, image.rows, QImage::Format_RGB32);
+        for(int y = 0; y < image.rows; ++y, data += image.cols*image.elemSize())
+        {
+            for(int x = 0; x < image.cols; ++x)
+            {
+                QRgb * p = ((QRgb*)qtemp.scanLine (y)) + x;
+                *p = qRgb(data[x * image.channels()+2], data[x * image.channels()+1], data[x * image.channels()]);
+            }
+        }
+    }
+    else if(!image.empty() && image.depth() != CV_8U)
+    {
+        printf("Wrong image format, must be 8_bits\n");
+    }
+    return qtemp;
+}
+
+void QNode::imageCallback(const sensor_msgs::ImageConstPtr& msg) {
+    cv_bridge::CvImagePtr cv_ptr;
+      try
+        {
+          cv_ptr = cv_bridge::toCvCopy(msg, sensor_msgs::image_encodings::BGR8);
+
+        }
+        catch (cv_bridge::Exception& e)
+        {
+          ROS_ERROR("cv_bridge exception: %s", e.what());
+          return;
+        }
+    px = QPixmap::fromImage(cvtCvMat2QImage(cv_ptr->image));
+    Q_EMIT Update_Image(&px);
 }
 
 }  // namespace qdude
