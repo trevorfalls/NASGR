@@ -38,6 +38,40 @@ float map(float x, float in_min, float in_max, float out_min, float out_max)
   return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 }
 
+/*
+ * left Horizontal (lh)= yaw
+ * left Vertical (lv)= y
+ * right Horizontal (rh)= x
+ * right Vertical (rv)= pitch
+ * right Trigger (rt)= negative z
+ * left trigger (lt)= positive z
+ *
+ * variables come in between -1 and 1
+ *
+ * 1          2
+ *  /--------\
+ *  |        |
+ *5 |        | 6
+ *  |        |
+ *  \--------/
+ * 3          4
+ *
+ * 5 and 6 are vertical thrusters, 5 is the front of the robot
+ * 1-4 are horizontal thrusters, angled at 45 degrees around a square in the center of the robot
+ */
+void calculateVector(float lh, float lv, float rh, float rv, float rt, float lt) {
+    //Let's do the easy ones first
+    u_int8_t motorOne;
+    u_int8_t motorTwo;
+    u_int8_t motorThree;
+    u_int8_t motorFour;
+    u_int8_t motorFive; //0 is full reverse, 255 is full forward
+    u_int8_t motorSix;
+
+
+
+}
+
 QNode::QNode(int argc, char** argv ) :
 	init_argc(argc),
 	init_argv(argv)
@@ -61,8 +95,7 @@ bool QNode::init() {
     ros::NodeHandle n;
     ros::NodeHandle in;
 	// Add your ros communications here.
-	chatter_publisher = n.advertise<std_msgs::String>("chatter", 1000);
-    cmd_publisher = n.advertise<std_msgs::String>("/gui_cmd", 1000);
+    chatter_publisher = n.advertise<std_msgs::String>("chatter", 1000);
     camToggle_client = n.serviceClient<topic_tools::MuxSelect>("mux_usb_cam/select");
     joy_subscriber = n.subscribe<sensor_msgs::Joy>("joy",10,&QNode::joyCallback,this);
     image_transport::ImageTransport rt_(in);
@@ -85,8 +118,7 @@ bool QNode::init(const std::string &master_url, const std::string &host_url) {
     ros::NodeHandle n;
     ros::NodeHandle in;
 	// Add your ros communications here.
-	chatter_publisher = n.advertise<std_msgs::String>("chatter", 1000);
-    cmd_publisher = n.advertise<std_msgs::String>("/gui_cmd", 1000);
+    chatter_publisher = n.advertise<std_msgs::String>("chatter", 1000);
     camToggle_client = n.serviceClient<topic_tools::MuxSelect>("mux_usb_cam/select");
     joy_subscriber = n.subscribe<sensor_msgs::Joy>("joy",10,&QNode::joyCallback,this);
     image_transport::ImageTransport rt_(in);
@@ -153,26 +185,6 @@ void QNode::log( const LogLevel &level, const std::string &msg) {
 	Q_EMIT loggingUpdated(); // used to readjust the scrollbar
 }
 
-void QNode::magicSlotPressed() {
-    std_msgs::String msg;
-    std::stringstream ss;
-    ss << "yes";
-    msg.data = ss.str();
-    cmd_publisher.publish(msg);
-
-    ros::spinOnce();
-}
-
-void QNode::magicSlotReleased() {
-    std_msgs::String msg;
-    std::stringstream ss;
-    ss << "no";
-    msg.data = ss.str();
-    cmd_publisher.publish(msg);
-
-    ros::spinOnce();
-}
-
 void QNode::joyCallback(const sensor_msgs::Joy::ConstPtr& joy) {
     static int camToggle = 0;
     static int activeCam = 0;
@@ -186,6 +198,7 @@ void QNode::joyCallback(const sensor_msgs::Joy::ConstPtr& joy) {
     Q_EMIT leftControlV(map(joy->axes[1],-1,1,0,100));
     Q_EMIT rightControlH(map(joy->axes[2],1,-1,0,100));
     Q_EMIT rightControlV(map(joy->axes[3],-1,1,0,100));
+    calculateVector(joy->axes[0],joy->axes[1],joy->axes[2],joy->axes[3],joy->axes[4],joy->axes[5]);
     if(joy->buttons[4]) {
         //image_sub_.shutdown();
         //image_sub_ = it_->subscribe("/usb_cam1/image_raw", 1, &QNode::imageCallback, this);

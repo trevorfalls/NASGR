@@ -45,10 +45,6 @@ MainWindow::MainWindow(QNode *node, QWidget *parent)
     ui.imageLabel->setPixmap(qnode->PixmapModel());
     QObject::connect(qnode, SIGNAL(loggingUpdated()), this, SLOT(updateLoggingView()));
 
-    //MAGIC
-    QObject::connect(ui.magicButton,SIGNAL(pressed()),qnode,SLOT(magicSlotPressed()));
-    QObject::connect(ui.magicButton,SIGNAL(released()),qnode,SLOT(magicSlotReleased()));
-
     //XBOX
     QObject::connect(qnode,SIGNAL(buttonAPressed(bool)),ui.checkA,SLOT(setChecked(bool)));
     QObject::connect(qnode,SIGNAL(buttonBPressed(bool)),ui.checkB,SLOT(setChecked(bool)));
