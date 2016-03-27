@@ -11,3 +11,4 @@ joystickPath=$(sudo timeout 0.1 xboxdrv --silent | grep '/dev/input/js')
 joystickPathTrim="$(echo "${joystickPath}" | sed -e 's/^[[:space:]]*//')"
 echo ":$joystickPathTrim:"
 rosparam set joy_node/dev "${joystickPathTrim}"
+sudo xboxdrv
