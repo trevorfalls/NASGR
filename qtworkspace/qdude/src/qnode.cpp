@@ -14,6 +14,7 @@
 #include <ros/network.h>
 #include <string>
 #include <std_msgs/String.h>
+#include <std_msgs/UInt8MultiArray.h>
 #include <topic_tools/MuxSelect.h>
 #include <sensor_msgs/Joy.h>
 #include <sstream>
@@ -63,6 +64,7 @@ bool QNode::init() {
 	// Add your ros communications here.
 	chatter_publisher = n.advertise<std_msgs::String>("chatter", 1000);
     cmd_publisher = n.advertise<std_msgs::String>("/gui_cmd", 1000);
+    motorValues_publisher = n.advertise<std_msgs::UInt8MultiArray>("/motorValues",6);
     camToggle_client = n.serviceClient<topic_tools::MuxSelect>("mux_usb_cam/select");
     joy_subscriber = n.subscribe<sensor_msgs::Joy>("joy",10,&QNode::joyCallback,this);
     image_transport::ImageTransport rt_(in);
@@ -87,6 +89,7 @@ bool QNode::init(const std::string &master_url, const std::string &host_url) {
 	// Add your ros communications here.
 	chatter_publisher = n.advertise<std_msgs::String>("chatter", 1000);
     cmd_publisher = n.advertise<std_msgs::String>("/gui_cmd", 1000);
+    motorValues_publisher = n.advertise<std_msgs::UInt8MultiArray>("/motorValues",6);
     camToggle_client = n.serviceClient<topic_tools::MuxSelect>("mux_usb_cam/select");
     joy_subscriber = n.subscribe<sensor_msgs::Joy>("joy",10,&QNode::joyCallback,this);
     image_transport::ImageTransport rt_(in);
@@ -186,6 +189,29 @@ void QNode::joyCallback(const sensor_msgs::Joy::ConstPtr& joy) {
     Q_EMIT leftControlV(map(joy->axes[1],-1,1,0,100));
     Q_EMIT rightControlH(map(joy->axes[2],1,-1,0,100));
     Q_EMIT rightControlV(map(joy->axes[3],-1,1,0,100));
+
+    std_msgs::UInt8MultiArray msg;
+
+    int baseZero=127;
+    float fwdFactor = 1.41;
+    float strafeFactor = 1.41;
+    float yawFactor = 0.2;
+    float fwdCmd = map(joy->axes[1],-1,1,-127,127);
+    float strafeCmd = map(joy->axes[0],1,-1,-127,127);
+    float yawCmd = map(joy->axes[2],1,-1,-127,127);
+
+    u_int8_t fwdRight = baseZero - fwdFactor*fwdCmd + strafeFactor*strafeCmd + yawFactor*yawCmd;
+    u_int8_t fwdLeft = baseZero - fwdFactor*fwdCmd - strafeFactor*strafeCmd - yawFactor*yawCmd;
+    u_int8_t backRight = baseZero + fwdFactor*fwdCmd + strafeFactor*strafeCmd - yawFactor*yawCmd;
+    u_int8_t backLeft = baseZero + fwdFactor*fwdCmd - strafeFactor*strafeCmd + yawFactor*yawCmd;
+
+    msg.data[0]=fwdRight;
+    msg.data[1]=fwdLeft;
+    msg.data[2]=backRight;
+    msg.data[3]=backLeft;
+
+    motorValues_publisher.publish(msg);
+
     if(joy->buttons[4]) {
         //image_sub_.shutdown();
         //image_sub_ = it_->subscribe("/usb_cam1/image_raw", 1, &QNode::imageCallback, this);
