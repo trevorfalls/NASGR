@@ -192,6 +192,8 @@ void QNode::joyCallback(const sensor_msgs::Joy::ConstPtr& joy) {
 
     std_msgs::UInt8MultiArray msg;
 
+    http://diydrones.com/forum/topics/controling-4-rov-thrusters-vectored-configuration-with-arduino?groupUrl=arduboat-user-group&groupId=705844%3AGroup%3A1741386&id=705844%3ATopic%3A2166053&page=1#comments
+
     int baseZero=127;
     float fwdFactor = 1.41;
     float strafeFactor = 1.41;
