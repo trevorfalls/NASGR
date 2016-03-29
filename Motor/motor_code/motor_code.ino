@@ -1,7 +1,7 @@
 //Controls the motors
 
 #include <ros.h>
-#include <std_msgs/UInt8MultiArray.h>
+#include <std_msgs/UInt16MultiArray.h>
 #include <Servo.h>
 
 ros::NodeHandle nh;
@@ -13,16 +13,16 @@ Servo motorBL;
 Servo motorFV;
 Servo motorBV;
 
-void pushValues(const std_msgs::UInt8MultiArray& values) {
-  motorFR.write(values.data[0]);
-  motorFL.write(values.data[1]);
-  motorBR.write(values.data[2]);
-  motorBL.write(values.data[3]);
-  motorFV.write(values.data[4]);
-  motorBV.write(values.data[5]);
+void pushValues(const std_msgs::UInt16MultiArray& values) {
+  motorFR.writeMicroseconds(values.data[0]);
+  motorFL.writeMicroseconds(values.data[1]);
+  motorBR.writeMicroseconds(values.data[2]);
+  motorBL.writeMicroseconds(values.data[3]);
+  motorFV.writeMicroseconds(values.data[4]);
+  motorBV.writeMicroseconds(values.data[5]);
 }
 
-ros::Subscriber<std_msgs::UInt8MultiArray> sub("motorValues",&pushValues);
+ros::Subscriber<std_msgs::UInt16MultiArray> sub("motorValues",&pushValues);
 
 void setup() {
   // put your setup code here, to run once:
