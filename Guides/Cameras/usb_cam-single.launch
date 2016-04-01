@@ -17,4 +17,6 @@
   </node>
   <node pkg="topic_tools" type="mux" name="mux_usb_cam" args="displayCam usb_cam/image_raw usb_cam1/image_raw mux:=mux_usb_cam">
   </node>
+  <node pkg="rosserial_python" type="serial_node.py" name="arduino" args="/dev/ttyUSB0">
+  </node>
 </launch>

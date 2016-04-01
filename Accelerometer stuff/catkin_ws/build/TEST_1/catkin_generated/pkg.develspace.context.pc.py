@@ -3,6 +3,6 @@ CATKIN_PACKAGE_PREFIX = ""
 PROJECT_PKG_CONFIG_INCLUDE_DIRS = "".split(';') if "" != "" else []
 PROJECT_CATKIN_DEPENDS = "".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
-PROJECT_NAME = "TEST_1"
+PROJECT_NAME = "test_1"
 PROJECT_SPACE_DIR = "/home/yizhuang/catkin_ws/devel"
 PROJECT_VERSION = "0.0.0"
