@@ -1,4 +1,4 @@
-# Install script for directory: /home/yizhuang/catkin_ws/src/test_1
+# Install script for directory: /home/yizhuang/catkin_ws/src/TEST_1
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -33,17 +33,17 @@ IF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 ENDIF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/yizhuang/catkin_ws/build/test_1/catkin_generated/installspace/test_1.pc")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/yizhuang/catkin_ws/build/TEST_1/catkin_generated/installspace/TEST_1.pc")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/test_1/cmake" TYPE FILE FILES
-    "/home/yizhuang/catkin_ws/build/test_1/catkin_generated/installspace/test_1Config.cmake"
-    "/home/yizhuang/catkin_ws/build/test_1/catkin_generated/installspace/test_1Config-version.cmake"
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/TEST_1/cmake" TYPE FILE FILES
+    "/home/yizhuang/catkin_ws/build/TEST_1/catkin_generated/installspace/TEST_1Config.cmake"
+    "/home/yizhuang/catkin_ws/build/TEST_1/catkin_generated/installspace/TEST_1Config-version.cmake"
     )
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/test_1" TYPE FILE FILES "/home/yizhuang/catkin_ws/src/test_1/package.xml")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/TEST_1" TYPE FILE FILES "/home/yizhuang/catkin_ws/src/TEST_1/package.xml")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 

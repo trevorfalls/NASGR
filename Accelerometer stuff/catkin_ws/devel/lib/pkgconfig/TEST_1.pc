@@ -1,7 +1,7 @@
 prefix=/home/yizhuang/catkin_ws/devel
 
-Name: test_1
-Description: Description of test_1
+Name: TEST_1
+Description: Description of TEST_1
 Version: 0.0.0
 Cflags: 
 Libs: -L/home/yizhuang/catkin_ws/devel/lib 
