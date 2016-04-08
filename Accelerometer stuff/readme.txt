@@ -23,8 +23,13 @@ V6.0 is up and running.
 
 1/21/2016
 	-Included accelerations in data sent through ROS. Started working on a complementary filter, still needs tweaking.
+	
+4/7/2016
+	-Cleaned up a lot of stuff, added bash script to automate launch of various programs.
+	-Cleaned up Cmakelist so ros program names match the name needed to launch program. 
+	-Commented a lot of stuff
 --------------------HOW TO USE---(outdated)---------------------------------
-To set up, connect the MPU-6250 to an Arduino Mega, connect VCC to 3.3V, GND to GND, SCL to SCL, and SDA to SDA.
+To set up, connect the MPU to an Arduino Mega or Uno, connect VCC to 3.3V, GND to GND, SCL to SCL, SDA to SDA, and INT to digital pin 2.
 
 ----------------MUST COMPLETE FUTURE GOALS------------------------------------------
 
