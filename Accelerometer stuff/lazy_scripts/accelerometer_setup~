@@ -9,7 +9,8 @@ select opts in $OPTIONS; do
 		sleep 2s
 		gnome-terminal --title=SERIAL_COMMUNICATION --geometry 80x5+0+90 -x sh -c "rosrun rosserial_python serial_node.py /dev/ttyACM0"
 		sleep 5s
-		gnome-terminal --title=RAW_DATA --geometry 80x20+0+210 -x sh -c "rosrun arduino_test_1 listener_ypr_realaccel"
+		gnome-terminal --title=RAW_DATA --geometry 80x20+0+210 -x -c "rosrun arduino_test_1 listener_ypr_realaccel"
+		exit
 	elif [ "$opts" = "NO" ]; then
 		echo "Exiting"
 		exit

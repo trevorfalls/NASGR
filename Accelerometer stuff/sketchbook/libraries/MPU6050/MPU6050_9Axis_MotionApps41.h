@@ -462,9 +462,9 @@ uint8_t MPU6050::dmpInitialize() {
             setZGyroOffset(zgOffset);
 
             DEBUG_PRINTLN(F("Setting X/Y/Z gyro user offsets to zero..."));
-            setXGyroOffsetUser(0);
-            setYGyroOffsetUser(0);
-            setZGyroOffsetUser(0);
+            //setXGyroOffsetUser(0);
+            //setYGyroOffsetUser(0);
+            //setZGyroOffsetUser(0);
 
             DEBUG_PRINTLN(F("Writing final memory update 1/19 (function unknown)..."));
             uint8_t dmpUpdate[16], j;

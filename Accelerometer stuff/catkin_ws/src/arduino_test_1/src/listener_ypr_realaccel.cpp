@@ -3,6 +3,8 @@
 #include <iostream>
 #include <iomanip> 
 
+#define AVERAGE_NUMBER_ELEMENTS 2		//used for averageing numbers purposes. Must be positive integer
+
 //deals with data that is called from ROS network
 void chatterCallback(const std_msgs::Float32MultiArray::Ptr & msg)
 {
@@ -21,7 +23,7 @@ void chatterCallback(const std_msgs::Float32MultiArray::Ptr & msg)
 	float xAccelOut(0), yAccelOut(0), zAccelOut(0), yawOut(0), pitchOut(0), rollOut(0);
 	
 	//containers for averaging data
-	float preAverageData[4][6];
+	static float preAverageData[6][AVERAGE_NUMBER_ELEMENTS];
 
 	//gets pitch and roll for compensation later
 	float pitchTemp 	= (*msg).data[4];		
@@ -38,37 +40,37 @@ void chatterCallback(const std_msgs::Float32MultiArray::Ptr & msg)
 	float yComp = (rollTemp/90)*.02*4096.0;	//yAccel compensation
 	float zComp = 1900-(((zRollTemp+zPitchTemp))*21.1);	//zAccel compensation
 	
-	//corret accelerations
+	//correct accelerations
 	xAccel -= xComp;
 	yAccel -= yComp;
 	zAccel -= zComp;
 
 	//gathers data to average
-	{
-		//variable to know which row to deal with
-		int row = cycles%4;
-		preAverageData[row][0] = xAccel;
-		preAverageData[row][1] = yAccel;
-		preAverageData[row][2] = zAccel;
-		preAverageData[row][3] = yaw;
-		preAverageData[row][4] = pitch;
-		preAverageData[row][5] = roll;
-	}
+	//variable to know which column to deal with
+	int column = cycles%AVERAGE_NUMBER_ELEMENTS;
+	preAverageData[0][column] = xAccel;
+	preAverageData[1][column] = yAccel;
+	preAverageData[2][column] = zAccel;
+	preAverageData[3][column] = yaw;
+	preAverageData[4][column] = pitch;
+	preAverageData[5][column] = roll;
 
 	// averages and prints data in a pretty way every 4 cycles to get average.
-	if (cycles%4 == 0) 
+	if (cycles%AVERAGE_NUMBER_ELEMENTS == 0) 
 	{
-/*	for (int i = 0; i < 4; i++)
-	{
-		xAccelOut += preAverageData[i][0]/4;
-		yAccelOut += preAverageData[i][1]/4;
-		zAccelOut += preAverageData[i][2]/4;
-		yawOut	 += preAverageData[i][3]/4;
-		pitchOut  += preAverageData[i][4]/4;
-		rollOut 	 += preAverageData[i][5]/4;
-	}
-*/
-	printf("xyz: %8.3f %8.3f %8.3f ypr: %8.3f %8.3f %8.3f \n",xAccel, yAccel, zAccel, yaw, pitch, roll);
+		for (int i = 0; i < AVERAGE_NUMBER_ELEMENTS; i++)
+		{
+			xAccelOut += preAverageData[0][i]/AVERAGE_NUMBER_ELEMENTS;
+			yAccelOut += preAverageData[1][i]/AVERAGE_NUMBER_ELEMENTS;
+			zAccelOut += preAverageData[2][i]/AVERAGE_NUMBER_ELEMENTS;
+			yawOut	 += preAverageData[3][i]/AVERAGE_NUMBER_ELEMENTS;
+			pitchOut  += preAverageData[4][i]/AVERAGE_NUMBER_ELEMENTS;
+			rollOut 	 += preAverageData[5][i]/AVERAGE_NUMBER_ELEMENTS;
+		}
+
+		//printf("xyz: %8.3f %8.3f %8.3f ypr: %8.3f %8.3f %8.3f \n",xAccelOut, yAccelOut, zAccelOut, yawOut, pitchOut, rollOut);
+		printf(" %8.3f %8.3f %8.3f \n",yawOut, pitchOut, rollOut);
+		fflush(stdout);
 	}
 	//increment cycles
 	cycles++;
