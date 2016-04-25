@@ -201,8 +201,6 @@ void QNode::joyCallback(const sensor_msgs::Joy::ConstPtr& joy) {
     float fwdCmd = map(joy->axes[1],1,-1,-400,400);
     float strafeCmd = map(joy->axes[0],1,-1,-400,400);
     float yawCmd = map(joy->axes[2],1,-1,-400,400);
-
-    //todo: factor in deadzone
     
     //input dynamic factor resizing
     //if we are pushing full forward and full yaw, should we let yaw have more precedence?
