@@ -220,6 +220,10 @@ void QNode::joyCallback(const sensor_msgs::Joy::ConstPtr& joy) {
     msg.data.push_back(backLeft);
     msg.data.push_back(0);
     msg.data.push_back(0);
+    u_int16_t claw = 1500;
+    if(joy->buttons[0]) claw = 1100;
+    else if(joy->buttons[1]) claw = 1900;
+    msg.data.push_back(claw);
 
     motorValues_publisher.publish(msg);
 
