@@ -211,13 +211,27 @@ void QNode::joyCallback(const sensor_msgs::Joy::ConstPtr& joy) {
     u_int16_t fwdLeft = zero - fwdFactor*fwdCmd - strafeFactor*strafeCmd - yawFactor*yawCmd;
     u_int16_t backRight = zero + fwdFactor*fwdCmd + strafeFactor*strafeCmd - yawFactor*yawCmd;
     u_int16_t backLeft = zero + fwdFactor*fwdCmd - strafeFactor*strafeCmd + yawFactor*yawCmd;
+    u_int16_t fwdVert = zero;
+    u_int16_t backVert = zero;
+    if(joy->axes[3]>0) { //No pitch for now, just to keep things simple and make sure we know values
+    	fwdVert = 1900;
+    	backVert = 1900;
+    }
+    else if(joy->axes[3]<0) {
+    	fwdVert = 1100;
+    	backVert = 1100;
+    }
 
     msg.data.push_back(fwdRight);
     msg.data.push_back(fwdLeft);
     msg.data.push_back(backRight);
     msg.data.push_back(backLeft);
-    msg.data.push_back(0);
-    msg.data.push_back(0);
+    msg.data.push_back(fwdVert);
+    msg.data.push_back(backVert);
+    u_int16_t claw = 1500;
+    if(joy->buttons[0]) claw = 1100;
+    else if(joy->buttons[1]) claw = 1900;
+    msg.data.push_back(claw);
 
     motorValues_publisher.publish(msg);
 

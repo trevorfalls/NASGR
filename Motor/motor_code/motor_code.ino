@@ -12,6 +12,7 @@ Servo motorBR;
 Servo motorBL;
 Servo motorFV;
 Servo motorBV;
+Servo claw;
 
 void pushValues(const std_msgs::UInt16MultiArray& values) {
   motorFR.writeMicroseconds(values.data[0]);
@@ -20,18 +21,28 @@ void pushValues(const std_msgs::UInt16MultiArray& values) {
   motorBL.writeMicroseconds(values.data[3]);
   motorFV.writeMicroseconds(values.data[4]);
   motorBV.writeMicroseconds(values.data[5]);
+  claw.writeMicroseconds(values.data[6]);
 }
 
 ros::Subscriber<std_msgs::UInt16MultiArray> sub("motorValues",&pushValues);
 
 void setup() {
   // put your setup code here, to run once:
-  motorFR.attach(9);
-  motorFL.attach(10);
+  motorFR.attach(26);
+  motorFL.attach(24);
   motorBR.attach(11);
-  motorBL.attach(12);
-  motorFV.attach(13);
-  motorBV.attach(14);
+  motorBL.attach(10);
+  motorFV.attach(12);
+  motorBV.attach(44);
+  claw.attach(45);
+  motorFR.writeMicroseconds(1500);
+  motorFL.writeMicroseconds(1500);
+  motorBR.writeMicroseconds(1500);
+  motorBL.writeMicroseconds(1500);
+  motorFV.writeMicroseconds(1500);
+  motorBV.writeMicroseconds(1500);
+  claw.writeMicroseconds(1500);
+  delay(1000);
   nh.initNode();
   nh.subscribe(sub);
 
