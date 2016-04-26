@@ -214,12 +214,12 @@ void QNode::joyCallback(const sensor_msgs::Joy::ConstPtr& joy) {
     u_int16_t fwdVert = zero;
     u_int16_t backVert = zero;
     if(joy->axes[3]>0) { //No pitch for now, just to keep things simple and make sure we know values
-    	fwdVert = 1900;
-    	backVert = 1900;
+        fwdVert = 1600;
+        backVert = 1900;
     }
     else if(joy->axes[3]<0) {
-    	fwdVert = 1100;
-    	backVert = 1100;
+        fwdVert = 1400;
+        backVert = 1100;
     }
 
     msg.data.push_back(fwdRight);
