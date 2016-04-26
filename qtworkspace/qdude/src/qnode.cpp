@@ -198,9 +198,9 @@ void QNode::joyCallback(const sensor_msgs::Joy::ConstPtr& joy) {
     float fwdFactor = 1;
     float strafeFactor = 1;
     float yawFactor = 0.14;
-    float fwdCmd = map(joy->axes[1],1,-1,-400,400);
-    float strafeCmd = map(joy->axes[0],1,-1,-400,400);
-    float yawCmd = map(joy->axes[2],1,-1,-400,400);
+    float fwdCmd = map(joy->axes[1],1,-1,-200,200);
+    float strafeCmd = map(joy->axes[0],1,-1,-200,200);
+    float yawCmd = map(joy->axes[2],1,-1,-200,200);
     
     //input dynamic factor resizing
     //if we are pushing full forward and full yaw, should we let yaw have more precedence?
@@ -213,22 +213,26 @@ void QNode::joyCallback(const sensor_msgs::Joy::ConstPtr& joy) {
     u_int16_t backLeft = zero + fwdFactor*fwdCmd - strafeFactor*strafeCmd + yawFactor*yawCmd;
     u_int16_t fwdVert = zero;
     u_int16_t backVert = zero;
-    if(joy->axes[3]>0) { //No pitch for now, just to keep things simple and make sure we know values
+    if(joy->axes[5]<1) { //No pitch for now, just to keep things simple and make sure we know values
         fwdVert = 1600;
         backVert = 1900;
     }
-    else if(joy->axes[3]<0) {
+    else if(joy->axes[4]<1) {
         fwdVert = 1400;
         backVert = 1100;
     }
+    u_int16_t claw = 1500;
+    if(joy->buttons[0]) claw = 1100;
+    else if(joy->buttons[1]) claw = 1900;
 
-    if(joy->buttons[8]) {
-	fwdRight=zero;
-	fwdLeft=zero;
-	backRight=zero;
-	backLeft=zero;
-	fwdVert=zero;
-	backVert=zero;
+    if(joy->buttons[8]) { //Power button
+        fwdRight=zero;
+        fwdLeft=zero;
+        backRight=zero;
+        backLeft=zero;
+        fwdVert=zero;
+        backVert=zero;
+        claw=zero;
     }
 
     msg.data.push_back(fwdRight);
@@ -237,9 +241,6 @@ void QNode::joyCallback(const sensor_msgs::Joy::ConstPtr& joy) {
     msg.data.push_back(backLeft);
     msg.data.push_back(fwdVert);
     msg.data.push_back(backVert);
-    u_int16_t claw = 1500;
-    if(joy->buttons[0]) claw = 1100;
-    else if(joy->buttons[1]) claw = 1900;
     msg.data.push_back(claw);
 
     motorValues_publisher.publish(msg);
