@@ -222,6 +222,15 @@ void QNode::joyCallback(const sensor_msgs::Joy::ConstPtr& joy) {
         backVert = 1100;
     }
 
+    if(joy->buttons[8]) {
+	fwdRight=zero;
+	fwdLeft=zero;
+	backRight=zero;
+	backLeft=zero;
+	fwdVert=zero;
+	backVert=zero;
+    }
+
     msg.data.push_back(fwdRight);
     msg.data.push_back(fwdLeft);
     msg.data.push_back(backRight);
