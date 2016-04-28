@@ -198,9 +198,11 @@ void QNode::joyCallback(const sensor_msgs::Joy::ConstPtr& joy) {
     float fwdFactor = 1;
     float strafeFactor = 1;
     float yawFactor = 0.14;
-    float fwdCmd = map(joy->axes[1],1,-1,-200,200);
+    float fwdCmd = map(joy->axes[1],-1,1,-200,200);
     float strafeCmd = map(joy->axes[0],1,-1,-200,200);
     float yawCmd = map(joy->axes[2],1,-1,-200,200);
+
+    if(fwdCmd == 0 && strafeCmd == 0) yawFactor=1;
     
     //input dynamic factor resizing
     //if we are pushing full forward and full yaw, should we let yaw have more precedence?
@@ -214,16 +216,25 @@ void QNode::joyCallback(const sensor_msgs::Joy::ConstPtr& joy) {
     u_int16_t fwdVert = zero;
     u_int16_t backVert = zero;
     if(joy->axes[5]<1) { //No pitch for now, just to keep things simple and make sure we know values
-        fwdVert = 1600;
-        backVert = 1900;
+        backVert = 1600;
+        fwdVert = 1900;
     }
     else if(joy->axes[4]<1) {
-        fwdVert = 1400;
-        backVert = 1100;
+        backVert = 1400;
+        fwdVert = 1100;
     }
     u_int16_t claw = 1500;
     if(joy->buttons[0]) claw = 1100;
     else if(joy->buttons[1]) claw = 1900;
+
+    if(fwdCmd>strafeCmd && strafeCmd >= 0) {
+        fwdLeft *= 1.03;
+        backLeft *= 1.03;
+    }
+    else if(fwdCmd<strafeCmd && strafeCmd <= 0) {
+        fwdLeft *= 1.07;
+        backLeft *= 1.07;
+    }
 
     if(joy->buttons[8]) { //Power button
         fwdRight=zero;
@@ -233,6 +244,11 @@ void QNode::joyCallback(const sensor_msgs::Joy::ConstPtr& joy) {
         fwdVert=zero;
         backVert=zero;
         claw=zero;
+    }
+
+    if(yawCmd > 100 || yawCmd < -100 || fwdCmd > 100 || fwdCmd < -100 || strafeCmd > 100 || strafeCmd < -100) {
+        fwdVert = zero;
+        backVert = zero;
     }
 
     msg.data.push_back(fwdRight);
