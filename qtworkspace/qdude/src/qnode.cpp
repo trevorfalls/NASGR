@@ -215,21 +215,36 @@ void QNode::joyCallback(const sensor_msgs::Joy::ConstPtr& joy) {
     u_int16_t backLeft = zero + fwdFactor*fwdCmd - strafeFactor*strafeCmd + yawFactor*yawCmd;
     u_int16_t fwdVert = zero;
     u_int16_t backVert = zero;
+    /*
     if(joy->axes[5]<1) { //No pitch for now, just to keep things simple and make sure we know values
-        backVert = 1600;
-        fwdVert = 1900;
+        backVert = 1500; //1600
+        fwdVert = 1500; //1900
     }
     else if(joy->axes[4]<1) {
-        backVert = 1400;
-        fwdVert = 1100;
+        backVert = 1500; //1400
+        fwdVert = 1500; //1100
     }
+    */
+    fwdVert = 1500;
+    backVert = 1500;
+    if(joy->buttons[2])
+    {
+        fwdVert = 1900;
+        backVert = 1600;
+    }
+    else if(joy->buttons[3])
+    {
+        fwdVert = 1100;
+        backVert = 1400;
+    }
+
     u_int16_t claw = 1500;
     if(joy->buttons[0]) claw = 1100;
     else if(joy->buttons[1]) claw = 1900;
 
     if(fwdCmd>strafeCmd && strafeCmd >= 0) {
-        fwdLeft *= 1.03;
-        backLeft *= 1.03;
+        fwdLeft *= 1.07;
+        backLeft *= 1.07;
     }
     else if(fwdCmd<strafeCmd && strafeCmd <= 0) {
         fwdLeft *= 1.07;
@@ -247,8 +262,12 @@ void QNode::joyCallback(const sensor_msgs::Joy::ConstPtr& joy) {
     }
 
     if(yawCmd > 100 || yawCmd < -100 || fwdCmd > 100 || fwdCmd < -100 || strafeCmd > 100 || strafeCmd < -100) {
-        fwdVert = zero;
-        backVert = zero;
+        if(joy->buttons[2] || joy->buttons[3]) {
+            fwdRight *= 0.25;
+            fwdLeft *= 0.25;
+            backRight *= 0.25;
+            backLeft *= 0.25;
+        }
     }
 
     msg.data.push_back(fwdRight);
