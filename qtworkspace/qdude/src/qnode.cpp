@@ -262,12 +262,21 @@ void QNode::joyCallback(const sensor_msgs::Joy::ConstPtr& joy) {
     }
 
     if(yawCmd > 100 || yawCmd < -100 || fwdCmd > 100 || fwdCmd < -100 || strafeCmd > 100 || strafeCmd < -100) {
-        if(joy->buttons[2] || joy->buttons[3]) {
+        /*if(joy->buttons[2] || joy->buttons[3]) {
             fwdRight *= 0.25;
             fwdLeft *= 0.25;
             backRight *= 0.25;
             backLeft *= 0.25;
-        }
+        }*/
+        fwdVert = 1500;
+        backVert = 1500;
+    }
+
+    if(joy->axes[5] < 90) {
+        fwdVert = zero + 2.5*(100 - joy->axes[5]);
+    }
+    else if(joy->axes[4]<90) {
+        fwdVert = zero - 2.5*(100 - joy->axes[4]);
     }
 
     msg.data.push_back(fwdRight);
