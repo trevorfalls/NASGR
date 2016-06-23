@@ -239,8 +239,8 @@ void QNode::joyCallback(const sensor_msgs::Joy::ConstPtr& joy) {
     }
 
     u_int16_t claw = 1500;
-    if(joy->buttons[0]) claw = 1100;
-    else if(joy->buttons[1]) claw = 1900;
+    if(joy->buttons[0]) claw = 1400;
+    else if(joy->buttons[1]) claw = 1600;
 
     if(fwdCmd>strafeCmd && strafeCmd >= 0) {
         fwdLeft *= 1.07;
@@ -272,11 +272,20 @@ void QNode::joyCallback(const sensor_msgs::Joy::ConstPtr& joy) {
         backVert = 1500;
     }
 
-    if(joy->axes[5] < 90) {
-        fwdVert = zero + 2.5*(100 - joy->axes[5]);
+    /*if(joy->axes[5] > 10) {
+        fwdVert = zero + 3*(joy->axes[5]);
     }
-    else if(joy->axes[4]<90) {
-        fwdVert = zero - 2.5*(100 - joy->axes[4]);
+    else if(joy->axes[4] > 10) {
+        fwdVert = zero - 3*(joy->axes[4]);
+    }*/
+    if(joy->axes[7]) {
+        fwdVert = 1680;
+    }
+    if(joy->buttons[5]) {
+        fwdRight=zero;
+        backLeft=zero;
+        fwdLeft=1300;
+        backRight=1700;
     }
 
     msg.data.push_back(fwdRight);
