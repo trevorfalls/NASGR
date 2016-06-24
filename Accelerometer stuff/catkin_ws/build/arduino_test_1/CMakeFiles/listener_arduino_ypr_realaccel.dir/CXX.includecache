@@ -13,6 +13,8 @@ std_msgs/Float32MultiArray.h
 /home/yizhuang/catkin_ws/src/arduino_test_1/src/std_msgs/Float32MultiArray.h
 iostream
 -
+iomanip
+-
 
 /opt/ros/indigo/include/XmlRpcDecl.h
 ros/macros.h

@@ -328,11 +328,11 @@ void loop() {
             mpu.dmpGetGravity(&gravity, &q);
             mpu.dmpGetLinearAccel(&aaReal, &aa, &gravity);
             Serial.print("areal\t");
-            Serial.print(aaReal.x);
+            Serial.print(aaReal.x/4096.0);
             Serial.print("\t");
-            Serial.print(aaReal.y);
+            Serial.print(aaReal.y/4096.0);
             Serial.print("\t");
-            Serial.println(aaReal.z);
+            Serial.println(aaReal.z/4096.0);
         #endif
 
         #ifdef OUTPUT_READABLE_WORLDACCEL

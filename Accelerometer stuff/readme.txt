@@ -1,6 +1,11 @@
-This program measures the orientation of the MPU-6050 accelerometer and outputs it through ros. 
+This program measures the orientation of the MPU-9250 and outputs it through serial. 
 
 -------------------CHANGELOG------------------------------------------------
+2/26/2016
+Created program to read raws from MPU-9250 which include xyz accelerations, gyroscopic accelerations, and magnetometer data. 
+No ROS programming integrated yet. Plan on figuring out how to get orientations and velocities before or while integrating ROS.
+Program called MPU_9250_Serial_Reader_2
+
 v3.0 uploaded 3 November 2015 
 	- V2 and V1 didn't work
 V5.0 uploaded 5 November 2015
@@ -15,10 +20,16 @@ V6.0 is up and running.
 
 1/18/2016
 	-Lowered sampling rate on accelerometer so the Arduino can be doing other things. Before, more of the processing power was needed to keep the FIFO buffer from overflowing.
---------------------HOW TO USE------------------------------------
-To set up the connect the MPU-6050 to an Arduino Mega, connect VCC to 3.3V, GND to GND, SCL to SCL, SDA to SDA, and INT to Digital I/O #2.
 
-Upload the program. Run roscore and the other ros stuff to make stuff visible. Will add more specifics later
+1/21/2016
+	-Included accelerations in data sent through ROS. Started working on a complementary filter, still needs tweaking.
+	
+4/7/2016
+	-Cleaned up a lot of stuff, added bash script to automate launch of various programs.
+	-Cleaned up Cmakelist so ros program names match the name needed to launch program. 
+	-Commented a lot of stuff
+--------------------HOW TO USE---(outdated)---------------------------------
+To set up, connect the MPU to an Arduino Mega or Uno, connect VCC to 3.3V, GND to GND, SCL to SCL, SDA to SDA, and INT to digital pin 2.
 
 ----------------MUST COMPLETE FUTURE GOALS------------------------------------------
 

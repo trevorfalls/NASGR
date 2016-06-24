@@ -14,6 +14,7 @@
 #include <ros/network.h>
 #include <string>
 #include <std_msgs/String.h>
+#include <std_msgs/UInt16MultiArray.h>
 #include <topic_tools/MuxSelect.h>
 #include <sensor_msgs/Joy.h>
 #include <sstream>
@@ -95,7 +96,9 @@ bool QNode::init() {
     ros::NodeHandle n;
     ros::NodeHandle in;
 	// Add your ros communications here.
-    chatter_publisher = n.advertise<std_msgs::String>("chatter", 1000);
+	chatter_publisher = n.advertise<std_msgs::String>("chatter", 1000);
+    cmd_publisher = n.advertise<std_msgs::String>("/gui_cmd", 1000);
+    motorValues_publisher = n.advertise<std_msgs::UInt16MultiArray>("/motorValues",6);
     camToggle_client = n.serviceClient<topic_tools::MuxSelect>("mux_usb_cam/select");
     joy_subscriber = n.subscribe<sensor_msgs::Joy>("joy",10,&QNode::joyCallback,this);
     image_transport::ImageTransport rt_(in);
@@ -117,8 +120,10 @@ bool QNode::init(const std::string &master_url, const std::string &host_url) {
 	ros::start(); // explicitly needed since our nodehandle is going out of scope.
     ros::NodeHandle n;
     ros::NodeHandle in;
-	// Add your ros communications here.
-    chatter_publisher = n.advertise<std_msgs::String>("chatter", 1000);
+    // Add your ros communications here.
+	chatter_publisher = n.advertise<std_msgs::String>("chatter", 1000);
+    cmd_publisher = n.advertise<std_msgs::String>("/gui_cmd", 1000);
+    motorValues_publisher = n.advertise<std_msgs::UInt16MultiArray>("/motorValues",6);
     camToggle_client = n.serviceClient<topic_tools::MuxSelect>("mux_usb_cam/select");
     joy_subscriber = n.subscribe<sensor_msgs::Joy>("joy",10,&QNode::joyCallback,this);
     image_transport::ImageTransport rt_(in);
@@ -198,7 +203,115 @@ void QNode::joyCallback(const sensor_msgs::Joy::ConstPtr& joy) {
     Q_EMIT leftControlV(map(joy->axes[1],-1,1,0,100));
     Q_EMIT rightControlH(map(joy->axes[2],1,-1,0,100));
     Q_EMIT rightControlV(map(joy->axes[3],-1,1,0,100));
-    calculateVector(joy->axes[0],joy->axes[1],joy->axes[2],joy->axes[3],joy->axes[4],joy->axes[5]);
+
+    std_msgs::UInt16MultiArray msg;
+
+    //http://diydrones.com/forum/topics/controling-4-rov-thrusters-vectored-configuration-with-arduino?groupUrl=arduboat-user-group&groupId=705844%3AGroup%3A1741386&id=705844%3ATopic%3A2166053&page=1#comments
+
+    int zero=1500;
+    float fwdFactor = 1;
+    float strafeFactor = 1;
+    float yawFactor = 0.14;
+    float fwdCmd = map(joy->axes[1],-1,1,-200,200);
+    float strafeCmd = map(joy->axes[0],1,-1,-200,200);
+    float yawCmd = map(joy->axes[2],1,-1,-200,200);
+
+    if(fwdCmd == 0 && strafeCmd == 0) yawFactor=1;
+    
+    //input dynamic factor resizing
+    //if we are pushing full forward and full yaw, should we let yaw have more precedence?
+    //if we are pushing only yaw, should that be higher?
+    //this will require a lot of playing around
+
+    u_int16_t fwdRight = zero - fwdFactor*fwdCmd + strafeFactor*strafeCmd + yawFactor*yawCmd;
+    u_int16_t fwdLeft = zero - fwdFactor*fwdCmd - strafeFactor*strafeCmd - yawFactor*yawCmd;
+    u_int16_t backRight = zero + fwdFactor*fwdCmd + strafeFactor*strafeCmd - yawFactor*yawCmd;
+    u_int16_t backLeft = zero + fwdFactor*fwdCmd - strafeFactor*strafeCmd + yawFactor*yawCmd;
+    u_int16_t fwdVert = zero;
+    u_int16_t backVert = zero;
+    /*
+    if(joy->axes[5]<1) { //No pitch for now, just to keep things simple and make sure we know values
+        backVert = 1500; //1600
+        fwdVert = 1500; //1900
+    }
+    else if(joy->axes[4]<1) {
+        backVert = 1500; //1400
+        fwdVert = 1500; //1100
+    }
+    */
+    fwdVert = 1500;
+    backVert = 1500;
+    if(joy->buttons[2])
+    {
+        fwdVert = 1900;
+        backVert = 1600;
+    }
+    else if(joy->buttons[3])
+    {
+        fwdVert = 1100;
+        backVert = 1400;
+    }
+
+    u_int16_t claw = 1500;
+    if(joy->buttons[0]) claw = 1400;
+    else if(joy->buttons[1]) claw = 1600;
+
+    if(fwdCmd>strafeCmd && strafeCmd >= 0) {
+        fwdLeft *= 1.07;
+        backLeft *= 1.07;
+    }
+    else if(fwdCmd<strafeCmd && strafeCmd <= 0) {
+        fwdLeft *= 1.07;
+        backLeft *= 1.07;
+    }
+
+    if(joy->buttons[8]) { //Power button
+        fwdRight=zero;
+        fwdLeft=zero;
+        backRight=zero;
+        backLeft=zero;
+        fwdVert=zero;
+        backVert=zero;
+        claw=zero;
+    }
+
+    if(yawCmd > 100 || yawCmd < -100 || fwdCmd > 100 || fwdCmd < -100 || strafeCmd > 100 || strafeCmd < -100) {
+        /*if(joy->buttons[2] || joy->buttons[3]) {
+            fwdRight *= 0.25;
+            fwdLeft *= 0.25;
+            backRight *= 0.25;
+            backLeft *= 0.25;
+        }*/
+        fwdVert = 1500;
+        backVert = 1500;
+    }
+
+    /*if(joy->axes[5] > 10) {
+        fwdVert = zero + 3*(joy->axes[5]);
+    }
+    else if(joy->axes[4] > 10) {
+        fwdVert = zero - 3*(joy->axes[4]);
+    }*/
+    if(joy->axes[7]) {
+        fwdVert = 1680;
+    }
+    if(joy->buttons[5]) {
+        fwdRight=zero;
+        backLeft=zero;
+        fwdLeft=1300;
+        backRight=1700;
+    }
+
+    msg.data.push_back(fwdRight);
+    msg.data.push_back(fwdLeft);
+    msg.data.push_back(backRight);
+    msg.data.push_back(backLeft);
+    msg.data.push_back(fwdVert);
+    msg.data.push_back(backVert);
+    msg.data.push_back(claw);
+
+    motorValues_publisher.publish(msg);
+
     if(joy->buttons[4]) {
         //image_sub_.shutdown();
         //image_sub_ = it_->subscribe("/usb_cam1/image_raw", 1, &QNode::imageCallback, this);
@@ -206,8 +319,11 @@ void QNode::joyCallback(const sensor_msgs::Joy::ConstPtr& joy) {
     }
     else if(camToggle){
         topic_tools::MuxSelect srv;
-        activeCam = (activeCam + 1) % 2;
-        if(activeCam==1) {
+        activeCam = (activeCam + 1) % 3;
+        if(activeCam==2) {
+            srv.request.topic = "usb_cam2/image_raw";
+        }
+        else if(activeCam==1) {
             srv.request.topic = "usb_cam1/image_raw";
         }
         else if(activeCam==0) {
